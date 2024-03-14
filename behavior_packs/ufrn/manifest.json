@@ -1,0 +1,26 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "UFRN Addon",
+    "description": "Configurações do mundo",
+    "uuid": "8d12ab63-c98c-4977-8859-7787bc30f864",
+    "version": [0, 0, 1],
+    "min_engine_version": [1, 20, 30]
+  },
+  "modules": [
+    {
+      "description": "Script resources",
+      "language": "javascript",
+      "type": "script",
+      "uuid": "96100c25-1ed0-4e6f-b18e-1ec0726809a1",
+      "version": [0, 0, 1],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.9.0"
+    }
+  ]
+}
