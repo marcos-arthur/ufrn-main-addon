@@ -9,7 +9,7 @@ import {
   Player,
 } from "@minecraft/server";
 
-import inside_cell_dialogue from "./dialogues/quest_0/inside_cell_dialogue.js"
+import inside_cell_dialogue from "./dialogues/quest_0/inside_cell_dialogue";
 
 const START_TICK = 100;
 
