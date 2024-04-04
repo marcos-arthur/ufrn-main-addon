@@ -7,51 +7,18 @@ import {
   DisplaySlotId,
   Vector3,
   Player,
+  RawMessage,
 } from "@minecraft/server";
 
-import inside_cell_dialogue from "./dialogues/quest_0/inside_cell_dialogue";
+import { getInsideCellDialogue } from "./dialogues/quest_0/inside_cell_dialogue";
 
 const START_TICK = 100;
+const overworld = world.getDimension("overworld");
 
 const intialPrisonCoord: Vector3 = { x: 218, y: -8, z: 190 };
 
 // global variables
 let curTick = 0;
-
-//Dialogues
-const insideCellDialogue = {
-  "rawtext":
-  [
-    {
-      "text": "§uRádio Walk Talk: §rEi, você aí"
-    },
-    // selector not working
-    {
-      "selector": "@s"
-    },
-    {
-      "text": "! \nÉ hora de escapar. Só siga o que eu disser e você vai sair dessa."
-    },
-  ]
-}
-
-const insideCellDialogue_1 = {
-  "rawtext":
-  [
-    {
-      "text": "§uRádio Walk Talk: §rNão importa quem eu sou no momento. \nO que importa é que você siga o que eu vou falar." 
-    }
-  ]
-}
-
-const insideCellDialogue_2 = {
-  "rawtext":
-  [
-    {
-      "text": "§uRádio Walk Talk: §rPrimeiro, estou hackeando a porta da sua cela. \nPorém só vou conseguir deixá-la aberta por um breve momento, \nme informe quando você estiver pronto para que eu possa abrir."
-    }
-  ]
-}
 
 world.afterEvents.playerSpawn.subscribe((eventData) => {
   let { player, initialSpawn } = eventData;
@@ -84,7 +51,7 @@ function gameTick() {
       for (let player of players) {
         // world.sendMessage(player.name);
         player.addTag("reading_dialogue_quest_0_1");
-        display_dialogue(insideCellDialogue, player)
+        display_dialogue_list(getInsideCellDialogue(player), player)
       }
     }
 
@@ -97,18 +64,30 @@ function gameTick() {
   system.run(gameTick);
 }
 
-const display_dialogue = async (dialogue: object, player: Player) => {
-  player.onScreenDisplay.setActionBar(insideCellDialogue);
-  system.runTimeout(() => {
-    player.onScreenDisplay.setActionBar(insideCellDialogue_1);
-      system.runTimeout(() => {
-        player.onScreenDisplay.setActionBar(insideCellDialogue_2);
-      }, 20 * 5);
-  }, 20 * 5);
-  
-  // await delay(3000);
-  // await delay(3000);
+const display_dialogue_list = async (dialogue_list: Array<RawMessage>, player: Player) => {
+  if(dialogue_list.length === 0) return;
+
+  player.onScreenDisplay.setActionBar(dialogue_list[0]);
+  display_dialogue(dialogue_list, player, 1)
 } 
+
+const display_dialogue = (dialogue_list: Array<object>, player: Player, index: number) =>{
+  if(index === dialogue_list.length) return;
+
+  system.runTimeout(() => {
+    player.onScreenDisplay.setActionBar(dialogue_list[index]);
+    display_dialogue(dialogue_list, player, ++index);
+  }, 20*4)
+}
+
+const replace_name_from_rawMessage = (rawMessage: RawMessage, name: string) : RawMessage => {
+  // rawMessage.rawtext?.map(message => {
+  //   message.text
+  // })
+  rawMessage.text = rawMessage.text?.replace("%player.name%", name);
+  world.sendMessage(rawMessage)
+  return rawMessage;
+}
 
 function delay(ms: number) {
   return new Promise( resolve => setTimeout(resolve, ms) );
