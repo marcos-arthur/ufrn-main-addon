@@ -80,17 +80,4 @@ const display_dialogue = (dialogue_list: Array<object>, player: Player, index: n
   }, 20*4)
 }
 
-const replace_name_from_rawMessage = (rawMessage: RawMessage, name: string) : RawMessage => {
-  // rawMessage.rawtext?.map(message => {
-  //   message.text
-  // })
-  rawMessage.text = rawMessage.text?.replace("%player.name%", name);
-  world.sendMessage(rawMessage)
-  return rawMessage;
-}
-
-function delay(ms: number) {
-  return new Promise( resolve => setTimeout(resolve, ms) );
-}
-
 system.run(gameTick);

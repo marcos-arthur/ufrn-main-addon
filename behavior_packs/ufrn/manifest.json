@@ -15,6 +15,12 @@
       "uuid": "96100c25-1ed0-4e6f-b18e-1ec0726809a1",
       "version": [0, 0, 1],
       "entry": "scripts/main.js"
+    },
+    {
+      "description": "Dialogue resources",
+      "type": "resources",
+      "uuid": "d7cb473b-88d9-4eaf-a6ee-01877343d64b",
+      "version": [0, 0, 1]
     }
   ],
   "dependencies": [
