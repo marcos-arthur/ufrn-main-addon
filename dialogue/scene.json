@@ -1,32 +1,51 @@
 {
-    "format_version": "1.20",
-    "minecraft:npc_dialogue": {
-        "scenes": [
-            {
-                "scene_tag":"ducky_intro",
-                "npc_name":"Ducky",
-                "text":"Hello new friend",
-                "on_open_commands":[
-                    "/clear @p"
-                ],
-                "on_close_commands":[
-                    "/say Farewell! "
-                ],
-                "buttons":[
-                    {
-                        "name":"Take Gold?",
-                        "commands":[
-                            "/give @initiator gold_ingot"
-                        ]
-                    },
-                    {  
-                        "name":"Wish Luck",
-                        "commands":[
-                            "/say Good luck!"
-                        ] 
-                    }
-                ]
-            }
+  "format_version": "1.20",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "ducky_intro",
+        "npc_name": "Ducky",
+        "text": "Hello new friend",
+        "on_open_commands": ["/clear @p"],
+        "on_close_commands": ["/say Farewell! "],
+        "buttons": [
+          {
+            "name": "Take Gold?",
+            "commands": ["/give @initiator gold_ingot"]
+          },
+          {
+            "name": "Wish Luck",
+            "commands": ["/say Good luck!"]
+          }
         ]
-    }
+      },
+      {
+        "scene_tag": "larry_helped_by_player",
+        "npc_name": "Larry",
+        "text": "Obrigado por me ajudar a escapar. Por favor, pegue está recompensa!",
+        "buttons": [
+          {
+            "name": "Obrigado!",
+            "commands": ["/give @initiator gold_ingot", "/dialogue change @e[tag=larry_free] larry_free @initiator"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "larry_dont_helped_by_player",
+        "npc_name": "Larry",
+        "text": "Por sorte eu consegui escapar...",
+        "buttons": [
+          {
+            "name": "Sinto muito :(",
+            "commands": ["/dialogue change @e[tag=larry_free] larry_free @initiator "]
+          }
+        ]
+      },
+      {
+        "scene_tag": "larry_free",
+        "npc_name": "Larry",
+        "text": "É tão bom estar livre novamente =D"
+      }
+    ]
+  }
 }
