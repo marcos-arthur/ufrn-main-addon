@@ -9,6 +9,7 @@
         "preLaunchTask": "build",
         "sourceMapRoot": "${workspaceFolder}/build/behavior_packs/_ufrnDebug/",
         "generatedSourceRoot": "${workspaceFolder}/build/behavior_packs/ufrn/scripts/",
+        "localRoot": "${workspaceFolder}/",
         "port": 19144
       }
     ]

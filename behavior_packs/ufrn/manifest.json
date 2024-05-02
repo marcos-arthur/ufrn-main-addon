@@ -3,9 +3,9 @@
   "header": {
     "name": "UFRN Addon",
     "description": "Configurações do mundo",
-    "uuid": "8d12ab63-c98c-4977-8859-7787bc30f864",
+    "uuid": "5f4ddb2c-614e-4674-ba50-2c482c2a7989",
     "version": [0, 0, 1],
-    "min_engine_version": [1, 20, 30]
+    "min_engine_version": [1, 20, 80]
   },
   "modules": [
     {
