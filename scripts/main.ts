@@ -36,13 +36,13 @@ function gameTick() {
     curTick++;
 
     if (curTick > START_TICK && curTick % 20 === 0) {
-      let noobs = world.getPlayers({ excludeTags: ["wasImprisoned", "Q0001"] });
+      let noobs = world.getPlayers({ excludeTags: ["wasImprisoned", "Q0000"] });
       for (let noobPlayer of noobs) {
         noobPlayer.teleport(intialPrisonCoord, {
           facingLocation: { x: intialPrisonCoord.x + 3, y: intialPrisonCoord.y - 1, z: intialPrisonCoord.z },
         });
         noobPlayer.addTag("wasImprisoned");
-        noobPlayer.addTag("Q0001");
+        noobPlayer.addTag("Q0000");
       }
       // let inv = player.getComponent("inventory") as EntityInventoryComponent;
       // inv.container.addItem(new ItemStack("diamond_sword"));
@@ -57,19 +57,20 @@ function gameTick() {
       let A1 = world.getAllPlayers();
       let A2 = A1[0].getTags();
 
+      // Pegar informações de jogadores dentro de um espaço
       let players_q0001_05 = overworld.getEntities({
         location: { x: 248, y: -9, z: 150 },
         maxDistance: 2,
-        tags: ["Q0001"],
-        excludeTags: ["Q0001_05", "Q0001_06"],
+        tags: ["Q0000"],
+        excludeTags: ["Q0000_05", "Q0000_06"],
       });
 
-      // console.warn("is player");
+      console.warn("is player");
       players_q0001_05.forEach((_entity) => {
         console.warn(_entity.nameTag);
         if (_entity.typeId === "minecraft:player") {
           // console.warn("is_player");
-          _entity.addTag("Q0001_05");
+          _entity.addTag("Q0000_05");
         }
       });
     }
@@ -82,15 +83,15 @@ function gameTick() {
         display_dialogue_list(getInsideCellDialogue(player), player);
       }
 
-      world.getPlayers({ tags: ["Q0001_05"] }).forEach((player) => {
-        player.removeTag("Q0001_05");
-        player.addTag("Q0001_06");
+      world.getPlayers({ tags: ["Q0000_05"] }).forEach((player) => {
+        player.removeTag("Q0000_05");
+        player.addTag("Q0000_06");
         display_dialogue_list(getElevatorPitDialogue(player), player);
       });
 
-      world.getPlayers({ tags: ["Q0002_01"] }).forEach((player) => {
-        player.removeTag("Q0002_01");
-        player.addTag("Q0002_02");
+      world.getPlayers({ tags: ["Q0001_01"] }).forEach((player) => {
+        player.removeTag("Q0001_01");
+        player.addTag("Q0001_02");
         display_dialogue_list(getAfterEscapeDialogue(player), player);
       });
 

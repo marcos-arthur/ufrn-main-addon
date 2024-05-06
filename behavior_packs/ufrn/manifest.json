@@ -18,7 +18,7 @@
     },
     {
       "description": "Dialogue resources",
-      "type": "resources",
+      "type": "data",
       "uuid": "d7cb473b-88d9-4eaf-a6ee-01877343d64b",
       "version": [0, 0, 1]
     }
