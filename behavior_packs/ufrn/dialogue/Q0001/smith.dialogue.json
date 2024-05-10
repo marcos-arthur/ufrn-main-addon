@@ -1,0 +1,51 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "smith_scene",
+        "npc_name": "Combatente Smith",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Agora que chegamos aqui, é necessário que você escale até a parte superior da construção que está ao meu lado!"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "text": "§1OK"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "scene_tag": "smith_scene_2",
+        "npc_name": "Combatente Smith",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Você conseguiu completar o desafio! \nVolte para conversar com o §1Combatente Wilson§r lá ele lhe informará quais os próximos passos!"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "text": "§1OK"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

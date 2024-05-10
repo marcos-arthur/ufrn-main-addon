@@ -1,0 +1,110 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "wilson_scene",
+        "npc_name": {
+          "rawtext": [
+            {
+              "text": "Combatente Wilson"
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "text": "Agora que estamos em um local mais seguro, podemos prosseguir com o seu processo de se juntar à §uResistência§r por meio de uma missão simples."
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": "Próximo",
+            "commands": ["/dialogue open @s @initiator wilson_scene_2"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "wilson_scene_2",
+        "npc_name": "Combatente Wilson",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Primeiro, precisamos verificar se seus conhecimentos não foram totalmente afetados pelo §4LUGA§r."
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": "Próximo",
+            "commands": ["/dialogue open @s @initiator wilson_scene_3"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "wilson_scene_3",
+        "npc_name": "Combatente Wilson",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Você precisa ir para as instalações do §1Relógio do Sol§r. \n\nLá podemos fazer algumas verificações sobre a orientação espacial, que será necessária para você chegar à nossa base principal.\n"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "text": "§1Vamos!§r"
+                }
+              ]
+            },
+            "commands": ["/tag @initiator add Q0001_02"]
+          }
+        ],
+        "on_close_commands": ["/"]
+      },
+      {
+        "scene_tag": "wilson_sceneconclusao_1",
+        "npc_name": "Combatente Wilson",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Parabéns! Você conseguiu completar o desafio! Agora sim é possível ver que você está preparado para fazer parte da §1Resistência§r, aqui estão as suas recompensas."
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": "Próximo",
+            "commands": ["/dialogue open @s @initiator wilson_sceneconclusao_2"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "wilson_sceneconclusao_2",
+        "npc_name": "Combatente Wilson",
+        "text": {
+          "rawtext": [
+            {
+              "text": "Para entender como funciona essa bússola é basicamente utilizar o mesmo conhecimento utilizado para cumprir o desafio! /n§6ATENÇÃO§r ele sempre aponta para direção NORTE!"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "text": "§1Finalizar!§r"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

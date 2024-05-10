@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Resources Packs UFRN",
+    "description": "Pacote de recursos UFRN",
+    "uuid": "18a77556-b84f-478c-a1aa-17b5599dbc1a",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 30]
+  },
+  "modules": [
+    {
+      "description": "Resources Packs Modules UFRN",
+      "type": "resources",
+      "uuid": "3bc69e29-fc31-486f-9126-aae82ae47076",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "5f4ddb2c-614e-4674-ba50-2c482c2a7989",
+      "version": [1, 0, 0]
+    }
+  ],
+  "metadata": {
+    "generated_with": {
+      "blockbench_block_wizard": ["1.2.2"]
+    }
+  }
+}
