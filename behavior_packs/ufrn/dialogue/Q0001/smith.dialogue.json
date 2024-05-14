@@ -20,7 +20,8 @@
                   "text": "§1OK"
                 }
               ]
-            }
+            },
+            "commands": ["/tag @initiator add Q0001_04"]
           }
         ]
       },

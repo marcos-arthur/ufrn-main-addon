@@ -61,7 +61,7 @@
                 }
               ]
             },
-            "commands": ["/tag @initiator add Q0001_02"]
+            "commands": ["/tag @initiator add Q0001_01"]
           }
         ],
         "on_close_commands": ["/"]

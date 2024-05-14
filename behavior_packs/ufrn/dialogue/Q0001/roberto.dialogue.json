@@ -34,7 +34,7 @@
         "buttons": [
           {
             "name": { "rawtext": [{ "text": "§9Iniciar Missão§r" }] },
-            "commands": ["/tag @initiator add Q0001_05"]
+            "commands": ["/tag @initiator add Q0001_08"]
           }
         ]
       },
