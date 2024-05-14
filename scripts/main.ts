@@ -19,7 +19,7 @@ function gameTick() {
     curTick++;
 
     if (curTick > START_TICK && curTick % 20 === 0) {
-      Quest0000.runQuest();
+      // Quest0000.runQuest();
       Quest0001.runQuest();
     }
 
