@@ -34,7 +34,7 @@
         "buttons": [
           {
             "name": { "rawtext": [{ "text": "§9Iniciar Missão§r" }] },
-            "commands": ["/tag @initiator add Q0001_08"]
+            "commands": ["/tag @initiator add Q0001_08", "/playsound random.toast @initiator ~ ~ ~ 1 0.65"]
           }
         ]
       },

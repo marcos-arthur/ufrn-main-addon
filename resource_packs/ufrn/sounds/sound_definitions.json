@@ -1,0 +1,31 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "ufrnsoundfx:walkietalkie": {
+      "sounds": [
+        {
+          "name": "sounds/fx/walkie_talkie",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 0.9
+        }
+      ]
+    },
+    "ufrnsoundfx:hint": {
+      "sounds": [
+        {
+          "name": "sounds/fx/hint",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
+        },
+        {
+          "name": "sounds/fx/hint",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 0.6
+        }
+      ]
+    }
+  }
+}

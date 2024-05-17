@@ -4,7 +4,7 @@
     "scenes": [
       {
         "scene_tag": "smith_scene",
-        "npc_name": "Combatente Smith",
+        "npc_name": "Combatente Rocha",
         "text": {
           "rawtext": [
             {
@@ -21,13 +21,13 @@
                 }
               ]
             },
-            "commands": ["/tag @initiator add Q0001_04"]
+            "commands": ["/tag @initiator add Q0001_04", "/playsound random.toast @initiator ~ ~ ~ 1 0.65"]
           }
         ]
       },
       {
         "scene_tag": "smith_scene_2",
-        "npc_name": "Combatente Smith",
+        "npc_name": "Combatente Rocha",
         "text": {
           "rawtext": [
             {

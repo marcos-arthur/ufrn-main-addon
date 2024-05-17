@@ -7,14 +7,14 @@
         "npc_name": {
           "rawtext": [
             {
-              "text": "Combatente Wilson"
+              "text": "Combatente Silva"
             }
           ]
         },
         "text": {
           "rawtext": [
             {
-              "text": "Agora que estamos em um local mais seguro, podemos prosseguir com o seu processo de se juntar à §uResistência§r por meio de uma missão simples."
+              "text": "Agora que estamos num canto mais seguro, podemos seguir com seu processo de se juntar à §uResistência§r através de uma missão simples."
             }
           ]
         },
@@ -27,11 +27,11 @@
       },
       {
         "scene_tag": "wilson_scene_2",
-        "npc_name": "Combatente Wilson",
+        "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
             {
-              "text": "Primeiro, precisamos verificar se seus conhecimentos não foram totalmente afetados pelo §4LUGA§r."
+              "text": "Primeiro, precisamos ver se seus conhecimentos não foram totalmente afetados pelo §4LUGA§r."
             }
           ]
         },
@@ -44,11 +44,11 @@
       },
       {
         "scene_tag": "wilson_scene_3",
-        "npc_name": "Combatente Wilson",
+        "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
             {
-              "text": "Você precisa ir para as instalações do §1Relógio do Sol§r. \n\nLá podemos fazer algumas verificações sobre a orientação espacial, que será necessária para você chegar à nossa base principal.\n"
+              "text": "Você precisa ir pras bandas do §1Relógio do Sol§r. \n\nLá a gente pode fazer umas verificações sobre a orientação espacial, que vai ser necessária pra chegar na nossa base principal.\n"
             }
           ]
         },
@@ -57,22 +57,21 @@
             "name": {
               "rawtext": [
                 {
-                  "text": "§1Vamos!§r"
+                  "text": "§1Vamo!§r"
                 }
               ]
             },
-            "commands": ["/tag @initiator add Q0001_01"]
+            "commands": ["/tag @initiator add Q0001_01", "/playsound random.toast @initiator ~ ~ ~ 1 0.65"]
           }
-        ],
-        "on_close_commands": ["/"]
+        ]
       },
       {
         "scene_tag": "wilson_sceneconclusao_1",
-        "npc_name": "Combatente Wilson",
+        "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
             {
-              "text": "Parabéns! Você conseguiu completar o desafio! Agora sim é possível ver que você está preparado para fazer parte da §1Resistência§r, aqui estão as suas recompensas."
+              "text": "Parabéns! Você conseguiu completar o desafio! Agora sim é possível ver que você está preparado pra fazer parte da §1Resistência§r, aqui tão as suas recompensas."
             }
           ]
         },
@@ -85,11 +84,11 @@
       },
       {
         "scene_tag": "wilson_sceneconclusao_2",
-        "npc_name": "Combatente Wilson",
+        "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
             {
-              "text": "Para entender como funciona essa bússola é basicamente utilizar o mesmo conhecimento utilizado para cumprir o desafio! /n§6ATENÇÃO§r ele sempre aponta para direção NORTE!"
+              "text": "Pra entender como funciona essa bússola é basicamente usar o mesmo conhecimento usado pra cumprir o desafio! /n§6ATENÇÃO§r ele sempre aponta pra direção NORTE!"
             }
           ]
         },
