@@ -1,91 +1,91 @@
-import { Player } from "@minecraft/server";
+import { Player, system } from "@minecraft/server";
 
 let player: Player;
 export default class Q0001Dialogues {
-  static Dialogue_01(_player: Player) {
+  static radioDialogue01(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: Ei, ${_player.name}\nSiga pelo corredor a esqueda da prisão para chegar no §1Relógio do Sol§r.`,
+            text: `§u|| Rádio ||§r §bCombatente Wilson§r: Ei, §a${_player.name}§r\nSiga pelo corredor a esqueda da prisão para chegar no §6Relógio do Sol§r.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_02(_player: Player) {
+  static radioDialogue02(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: Ei, ${_player.name}\nDialogo 2.`,
+            text: `§u|| Rádio ||§r §bCombatente Wilson§r: Siga o caminho destacado.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_03(_player: Player) {
+  static hintDialogue03(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: , ${_player.name}\nO §1Comandante Smith§r está próximo`,
+            text: `§e|| Dica ||§r Interaja com o §bCombatente Smith§r\npara iniciar o Desafio.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_04(_player: Player) {
+  static radioDialogue04(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Smith§r: , ${_player.name}\nSiga o caminho destacado e suba até o §1Relógio do Sol§r.`,
+            text: `§u|| Rádio ||§r §bCombatente Smith§r: Siga o caminho destacado e suba até o §6Relógio do Sol§r.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_05(_player: Player) {
+  static hintDialogue05(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: , ${_player.name}\nDialogo 5.`,
+            text: `§e|| Dica ||§r Você precisa pular de bloco em bloco\npara chegar no topo.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_06(_player: Player) {
+  static radioDialogue06(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: , ${_player.name}\nDialogo 6.`,
+            text: `§u|| Rádio ||§r §bCombatente Roberto§r: Ei, §a${_player.name}§r \neu estou aqui em cima.`,
           },
         ],
       },
     ];
   }
-  static Dialogue_07(_player: Player) {
+  static hintDialogue07(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: , ${_player.name}\nDialogo 7.`,
+            text: `§e|| Dica ||§r Interaja com o §bCombatente Roberto§r\npara iniciar o Desafio.`,
           },
         ],
       },
     ];
   }
 
-  static Dialogue_08(_player: Player) {
+  static radioDialogue08(_player: Player) {
     return [
       {
         rawtext: [
           {
-            text: `§uRádio§r §1Comandante Wilson§r: , ${_player.name}\nDialogo 8.`,
+            text: `§u|| Rádio ||§r §bCombatente Wilson§r: Diálogo 8.`,
           },
         ],
       },

@@ -3,7 +3,7 @@
   "minecraft:npc_dialogue": {
     "scenes": [
       {
-        "scene_tag": "wilson_scene",
+        "scene_tag": "silva_scene",
         "npc_name": {
           "rawtext": [
             {
@@ -21,12 +21,12 @@
         "buttons": [
           {
             "name": "Próximo",
-            "commands": ["/dialogue open @s @initiator wilson_scene_2"]
+            "commands": ["/dialogue open @s @initiator silva_scene_2"]
           }
         ]
       },
       {
-        "scene_tag": "wilson_scene_2",
+        "scene_tag": "silva_scene_2",
         "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
@@ -38,12 +38,12 @@
         "buttons": [
           {
             "name": "Próximo",
-            "commands": ["/dialogue open @s @initiator wilson_scene_3"]
+            "commands": ["/dialogue open @s @initiator silva_scene_3"]
           }
         ]
       },
       {
-        "scene_tag": "wilson_scene_3",
+        "scene_tag": "silva_scene_3",
         "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
@@ -66,7 +66,7 @@
         ]
       },
       {
-        "scene_tag": "wilson_sceneconclusao_1",
+        "scene_tag": "silva_sceneconclusao_1",
         "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
@@ -78,12 +78,12 @@
         "buttons": [
           {
             "name": "Próximo",
-            "commands": ["/dialogue open @s @initiator wilson_sceneconclusao_2"]
+            "commands": ["/dialogue open @s @initiator silva_sceneconclusao_2"]
           }
         ]
       },
       {
-        "scene_tag": "wilson_sceneconclusao_2",
+        "scene_tag": "silva_sceneconclusao_2",
         "npc_name": "Combatente Silva",
         "text": {
           "rawtext": [
