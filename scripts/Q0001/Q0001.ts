@@ -1,46 +1,45 @@
-import { system, world } from "@minecraft/server";
+import { Player, system, world } from "@minecraft/server";
 import Utilities from "../Utilities";
 import Q0001Dialogues from "./dialogues";
-import { Paths } from "./paths";
+import { Paths } from "./paths_teste";
 
 const overworld = world.getDimension("overworld");
-//* Cria NPC
-system.runTimeout(() => {
-  let npcs = overworld.getEntitiesAtBlockLocation({ x: 386.5, y: -22, z: 176.5 });
 
-  if (npcs.length < 1) {
-    console.log("NPC não encontrado");
-    overworld.spawnEntity("minecraft:npc", { x: 386.5, y: -22, z: 176.5 });
-    npcs = overworld.getEntitiesAtBlockLocation({ x: 386.5, y: -22, z: 176.5 });
-  }
-  if (npcs[0].isValid()) {
-    const npcSilva = npcs[0];
-    npcSilva.runCommandAsync("dialogue change @e[type=npc, r=2] wilson_scene @a");
-    npcSilva.playAnimation("animation.npc.move");
-    console.log("NPC encontrado ");
-  }
-}, 200);
-
+const azimuteNorte = 180;
+const azimuteSul = 0;
+const azimuteLeste = 270;
+const azimuteOeste = 90;
+const azimuteArray = [azimuteNorte, azimuteSul, azimuteLeste, azimuteOeste];
+function randomAzimute<T>(arr: T[]): number {
+  return azimuteArray[Math.floor(Math.random() * azimuteArray.length)];
+}
 export default class Quest0001 {
+  /**
+   * Runs the Quest0001. It creates the paths for the quest and handles the quest progression.
+   *
+   * @return {void} This function does not return anything.
+   */
   static runQuest() {
     //* Cria o caminhos da Quest
-    world.getPlayers({ tags: ["PATH_0001_01"] }).forEach((player) => {
-      Paths.Path0001_01();
-    });
+
     world.getPlayers({ tags: ["PATH_0001_04"] }).forEach((player) => {
       Paths.Path0001_04();
     });
 
     //* Quest Início da Quest
-    // Quest 001 - 01
-    overworld
-      .getPlayers({ location: { x: 382.5, y: -22, z: 186.5 }, maxDistance: 4, tags: ["Q0001_01"] })
-      .forEach((player) => {
-        player.addTag("PATH_0001_01");
-        Utilities.displayDialogueInit(Q0001Dialogues.radioDialogue01(player), player);
-      });
+    // Quest 0001_1
 
-    // Quest 001 - 02
+    overworld
+      .getPlayers({ location: { x: 381.5, y: -22, z: 186.5 }, maxDistance: 4, tags: ["Q0001_01"] })
+      .forEach((_player) => {
+        _player.addTag("PATH_0001_01");
+        Utilities.displayDialogueInit(Q0001Dialogues.radioDialogue01(_player), _player);
+      });
+    world.getPlayers({ tags: ["PATH_0001_01"] }).forEach((player) => {
+      Paths.Path0001_01();
+    });
+
+    // Quest 0001_02
     overworld
       .getPlayers({ location: { x: 368.5, y: -22, z: 207.5 }, maxDistance: 2, tags: ["Q0001_01"] })
       .forEach((_player) => {
@@ -49,16 +48,15 @@ export default class Quest0001 {
         _player.removeTag("Q0001_01");
       });
 
-    // Quest 001 - 03
+    // Quest 0001_03
     overworld
-      .getPlayers({ location: { x: 342.5, y: -22, z: 275.5 }, maxDistance: 2, tags: ["Q0001_02", "Q0001_01"] })
+      .getPlayers({ location: { x: 342.5, y: -22, z: 275.5 }, maxDistance: 5, tags: ["Q0001_02"] })
       .forEach((_player) => {
         _player.addTag("Q0001_03");
         Utilities.displayDialogueInit(Q0001Dialogues.hintDialogue03(_player), _player);
-        _player.removeTag("Q0001_02");
       });
 
-    // Quest 001 - 04
+    // Quest 0001_04
     overworld
       .getPlayers({ location: { x: 341.5, y: -22, z: 275.5 }, maxDistance: 4, tags: ["Q0001_04"] })
       .forEach((_player) => {
@@ -68,7 +66,7 @@ export default class Quest0001 {
         _player.addTag("PATH_0001_04");
       });
 
-    // Quest 001 - 05
+    // Quest 0001_05
     overworld
       .getPlayers({ location: { x: 320.5, y: -23, z: 271.5 }, maxDistance: 2, tags: ["Q0001_04"] })
       .forEach((_player) => {
@@ -77,7 +75,7 @@ export default class Quest0001 {
         _player.removeTag("Q0001_04");
       });
 
-    // Quest 001 - 06
+    // Quest 0001_06
     overworld
       .getPlayers({ location: { x: 319.5, y: -16, z: 278.5 }, maxDistance: 2, tags: ["Q0001_05"] })
       .forEach((_player) => {
@@ -86,7 +84,7 @@ export default class Quest0001 {
         _player.removeTag("Q0001_05");
       });
 
-    // Quest 001 - 07
+    // Quest 0001_07
     overworld
       .getPlayers({ location: { x: 327.5, y: -14, z: 290.5 }, maxDistance: 2, tags: ["Q0001_06"] })
       .forEach((_player) => {
@@ -95,7 +93,7 @@ export default class Quest0001 {
         _player.removeTag("Q0001_06");
       });
 
-    // Quest 001 - 08
+    // Quest 0001_08
     overworld
       .getPlayers({ location: { x: 327.5, y: -14, z: 290.5 }, maxDistance: 2, tags: ["Q0001_07"] })
       .forEach((_player) => {
@@ -104,12 +102,55 @@ export default class Quest0001 {
         _player.removeTag("Q0001_07");
       });
 
-    // Quest 001 - 09
+    // Quest 0001_09
     overworld.getPlayers({ tags: ["Q0001_08"] }).forEach((_player) => {
-      _player.teleport({ x: 317.5, y: -13, z: 286.5 });
+      _player.teleport({ x: 317.5, y: -12, z: 286.5 }, { rotation: { x: 0, y: azimuteNorte } });
+      Utilities.displayDialogueInit(Q0001Dialogues.hintDialogue09(_player), _player);
+      _player.runCommandAsync("give @s minecraft:compass");
+      // _player.runCommandAsync("title @s title §eDesafio Direções");
+      _player.onScreenDisplay.setTitle("s2", {
+        fadeInDuration: 10,
+        stayDuration: 300,
+        fadeOutDuration: 10,
+        subtitle: "§eAperte o botão que está \nvoltado para a direção §2Norte",
+      });
       _player.addTag("Q0001_09");
-      // Utilities.displayDialogueInit(Q0001Dialogues.hintDialogue09(_player), _player);
+
       _player.removeTag("Q0001_08");
+    });
+
+    // Quest 0001_10
+    overworld.getPlayers({ tags: ["Q0001_09"] }).forEach((_player) => {
+      world.afterEvents.buttonPush.subscribe((e) => {
+        if (e.block.location.x === 317 && e.block.location.y === -12 && e.block.location.z === 280) {
+          _player.onScreenDisplay.setActionBar("§6Direção corréta");
+          _player.removeTag("Q0001_09");
+          _player.addTag("Q0001_10");
+        } else {
+          _player.onScreenDisplay.setActionBar("§6Direção errada");
+          _player.teleport({ x: 317.5, y: -12, z: 286.5 }, { rotation: { x: 0, y: randomAzimute(azimuteArray) } });
+        }
+      });
+    });
+
+    // Quest 0001_11
+    overworld.getPlayers({ tags: ["Q0001_10"] }).forEach((_player) => {
+      world.afterEvents.buttonPush.subscribe((e) => {
+        console.log(e.block.location.x, e.block.location.y, e.block.location.z);
+        if (
+          e.block.location.x === 323 &&
+          e.block.location.y === -12 &&
+          e.block.location.z === 286 &&
+          _player.hasTag("Q0001_10")
+        ) {
+          _player.onScreenDisplay.setActionBar("§6Direção correta");
+          _player.removeTag("Q0001_10");
+          _player.addTag("Q0001_11");
+        } else {
+          _player.onScreenDisplay.setActionBar("§6Direção errada");
+          _player.teleport({ x: 317.5, y: -12, z: 286.5 }, { rotation: { x: 0, y: randomAzimute(azimuteArray) } });
+        }
+      });
     });
   }
 }
