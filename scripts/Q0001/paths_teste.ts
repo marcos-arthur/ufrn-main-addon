@@ -1,3 +1,4 @@
+// ! Script elaborado apenas para testar
 import { world } from "@minecraft/server";
 
 let overworld = world.getDimension("overworld");

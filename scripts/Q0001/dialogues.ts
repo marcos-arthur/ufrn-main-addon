@@ -91,4 +91,23 @@ export default class Q0001Dialogues {
       },
     ];
   }
+
+  static hintDialogue09(_player: Player) {
+    return [
+      {
+        rawtext: [
+          {
+            text: `§eDesafio Iniciado!||§r`,
+          },
+        ],
+      },
+      {
+        rawtext: [
+          {
+            text: `§eAperte o botão que está voltado para a direção §2Norte.`,
+          },
+        ],
+      },
+    ];
+  }
 }
