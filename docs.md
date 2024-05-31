@@ -27,10 +27,14 @@ Os colchetes [_] simbolizam que haverão várias pastas e arquivos irmãos que s
 Dentro da pastas _scripts_ estarão as pastas com os códigos das quests do jogo.\
 Cada _quest_ terá uma pasta para ela e dentro dessa pasta haverão dois arquivos.
 
-O primeiro arquivo é o _dialogues.ts_, nesse arquivo estarão todos os diálogos corridos que aparecem na tela do jogador como legendas.
+O primeiro arquivo é o _dialogues.ts_, nesses arquivos estarão todos os diálogos corridos que aparecem na tela do jogador como legendas. \
+
+> Leve-me para a seção [Arquivos dialogue.ts](#arquivos-dialoguests)
 
 O segundo arquivo é [QUEST_TAG].ts, nesse arquivo estarão os códigos relacionados à quest.\
 O texto [QUEST_TAG] deverá ser substituído pela _tag_ da quest, que seguirá o padrão QXXXX, ou seja, a _quest 0_ terá como tag o valor Q0000.
+
+> Leve-me para a seção [Exemplos de códigos](#exemplos-de-códigos)
 
 ## Exemplos de códigos
 
@@ -53,7 +57,7 @@ export default class Quest[XXXX] {
 
 ```
 
-`Obs.: Lembrar de substituir os valores entre colchete [_]`
+> Obs.: Lembrar de substituir os valores entre colchete [ _ ]
 
 As primeiras três linhas importarão arquivos necessários para escrever códigos gerais das quests.\
 Na quinta linha está sendo _setada_ a varíavel **_overworld_** pelo mesmo motivos anterior.
@@ -83,7 +87,11 @@ const players: Player[] = world.getPlayers({
 });
 ```
 
-`Dica: Ao invés de declarar uma variável para guardar uma lista de jogadores, muitas vezes será mais interessante executar um código diretamente da função getPlayers(). Para isso pode-se executar o seguinte comando:`
+#### **Sugestão**
+
+Ao invés de declarar uma variável para guardar uma lista de jogadores, muitas vezes será mais interessante executar um código diretamente da função getPlayers().
+
+Para isso pode-se executar o seguinte comando:
 
 ```js
 world
@@ -147,3 +155,104 @@ world.getPlayers({ tags: ["quero_teleportar"] }).forEach((_player) => {
 
 O parâmetro **_facingLocation_**, vai receber a coordenada na qual ele vai ser teleportado como base somado com os valores que vão dar a coordenada para onde o jogador deve estar olhando.\
 No exemplo acima, se o jogador estiver sendo teleportado para a coordenada **{x: 10, y: 15 z: 20}**, então, ao ser teleportado, ele vai estar olhando para a coordenada **{x: 13, y: 14 z: 20}**.
+
+## Classe Utilities
+
+A classe **_Utilities_** possui funções que serão utilizadas para acelerar alguns processos durante o desenvolvimento das Quests.
+
+Abaixo estão listadas as funções da classe e o que elas fazem.
+
+### displayDialogueInit()
+
+```js
+static async displayDialogueInit(_dialogue_list: Array<RawMessage>, _player: Player)
+```
+
+Esta função é responsável por exibir as legendas relacionadas a diálogos ou a dicas que aparecem para o jogador enquanto sem abrir nenhum popup.
+
+#### Parâmetros
+
+| Nome            | Tipo               | Descrição                                  |
+| --------------- | ------------------ | ------------------------------------------ |
+| \_dialogue_list | Array\<RawMessage> | Lista com os diálogos                      |
+| \_player        | Player             | Jogador para o qual o diálogo será exibido |
+
+#### Exemplo de uso
+
+```js
+import Utilities from "../Utilities";
+
+const _example_dialogue_list = [
+  //Primeira fala
+  {
+    rawtext: [
+      {
+        text: `§uCharles-Bô: §rPronto para a aventura?`,
+      },
+    ],
+  },
+  //Segunda fala
+  {
+    rawtext: [
+      {
+        text: `§uAluno: §rSIM!`,
+      },
+    ],
+  },
+  // ... //
+];
+
+world.getPlayers({ tags: ["exibir_legenda"] }).forEach((_player) => {
+  Utilities.displayDialogueInit(_example_dialogue_list, _player);
+});
+```
+
+## Arquivos dialogues.ts
+
+Os arquivos **_dialogues.ts_** localizados dentro das pastas **[QUEST_TAG]** possuirão uma classe com funções que representam uma seção de diálogos corridos que ocorrerão durante uma quest específica.
+
+### Modelo de uma classe de dialogo
+
+Abaixo pode-se ver um exemplo de classe de diálogo.\
+Na primeira linha, está sendo importada a classe Player para que possamos obter no futuro as obter as informações do jogador, como o seu nome, e as exibir em falas.
+
+O nome da classe possui o termo "Quest", seguido dos números identificadores da Quest e, por fim, com o termo "Dialogues", formando-se assim Quest[XXXX]Dialogues.
+
+Dentro da classe, haverão funções que representam momentos durante a quest, por exemplo, quando o jogador chegar a um determinado local que a missão pede.\
+Essa função terá como parâmetro um objeto **Player** para resgatar as informações do jogador.
+
+Por fim, cada função retornará uma lista de RawMessage, onde cada RawMessage representará uma fala que aparecerá por vez na tela do jogador como uma legenda.
+
+O RawMessage é um padrão utilizado no Minecraft Bedrock para exibir textos para o jogador, nesse formato podemos ter textos coloridos, por exemplo.
+
+Abaixo pode-se ver um exemplo de aplicação da função.
+
+```js
+import { Player } from "@minecraft/server";
+
+export default class Quest[XXXX]Dialogues {
+  static afterEscapeDialogue(_player: Player) {
+    return [
+      {
+        rawtext: [
+          {
+            text: `§uCharles-Bô: §rVAMOS NESSA, ${_player.name}!`,
+          },
+        ],
+      },
+    ];
+  }
+}
+```
+
+Por padrão, vamos utilizamos o seguinte formato para uma fala:
+
+```js
+§u[NOME_DO_PERSONAGEM]: §r[FALA]
+```
+
+Também é possível exibir o nome do jogador utilizando o seguinte comando dentro texto:
+
+```js
+${_player.name}
+```

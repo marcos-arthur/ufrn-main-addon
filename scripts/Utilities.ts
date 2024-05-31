@@ -56,6 +56,13 @@ export default class Utilities {
     }, 20 * 4);
   }
 
+  /**
+   * Exibe na tela do jogador um diálogo corrido.
+   * Cada caixa de diálogo é um RawMessage na lista
+   * @param _dialogue_list Lista com os diálogos
+   * @param _player Jogador para o qual o diálogo será exibido
+   * @returns void
+   */
   static async displayDialogueInit(_dialogue_list: Array<RawMessage>, _player: Player) {
     if (_dialogue_list.length === 0) return;
 
@@ -64,4 +71,24 @@ export default class Utilities {
   }
 
   // const display_dialogue = (dialogue_list: Array<object>, player: Player, index: number) => {
+
+  //TODO: Função simplificada para pegar pegar jogadores em uma área
+  /*
+
+  let players_q0001_05 = overworld.getEntities({
+      location: { x: 248, y: -9, z: 150 },
+      maxDistance: 2,
+      tags: ["Q0000"],
+      excludeTags: ["Q0000_05", "Q0000_06"],
+    });
+
+    players_q0001_05.forEach((_entity) => {
+      console.warn(_entity.nameTag);
+      if (_entity.typeId === "minecraft:player") {
+        // console.warn("is_player");
+        _entity.addTag("Q0000_05");
+      }
+    });
+  
+  */
 }
