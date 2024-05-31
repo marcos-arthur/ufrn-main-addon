@@ -156,6 +156,10 @@ world.getPlayers({ tags: ["quero_teleportar"] }).forEach((_player) => {
 O parâmetro **_facingLocation_**, vai receber a coordenada na qual ele vai ser teleportado como base somado com os valores que vão dar a coordenada para onde o jogador deve estar olhando.\
 No exemplo acima, se o jogador estiver sendo teleportado para a coordenada **{x: 10, y: 15 z: 20}**, então, ao ser teleportado, ele vai estar olhando para a coordenada **{x: 13, y: 14 z: 20}**.
 
+### Obter jogadores dentro de uma área
+
+Para obter os jogadores dentro de uma área, precisaremos utilizar dois comandos diferentes em sequência, um para obter
+
 ## Classe Utilities
 
 A classe **_Utilities_** possui funções que serão utilizadas para acelerar alguns processos durante o desenvolvimento das Quests.
