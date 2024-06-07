@@ -1,6 +1,8 @@
-import { world, BlockPermutation, RawMessage, Player, system } from "@minecraft/server";
+import { world, BlockPermutation, RawMessage, Player, system, Vector3, Dimension } from "@minecraft/server";
 
 export default class Utilities {
+  static _overworld: Dimension = world.getDimension("overworld");
+
   static fillBlock(
     blockPerm: BlockPermutation,
     xFrom: number,
@@ -72,23 +74,40 @@ export default class Utilities {
 
   // const display_dialogue = (dialogue_list: Array<object>, player: Player, index: number) => {
 
-  //TODO: Função simplificada para pegar pegar jogadores em uma área
+  /**
+   * Retorna uma lista com os jogadores dentro de um volume.
+   * @param _location Coordenadas do centro do local no mundo para ser verificado
+   * @param _maxDistante Raio de verificação
+   * @param _tags Tags para inculir somente os jogadores que possuem elas
+   * @param _excludeTags Tags para ignorar os jogadores que possuem elas
+   * @returns Player[]
+   */
+  static getPlayersInVolume(
+    _location: Vector3,
+    _maxDistance: number,
+    _tags?: string[],
+    _excludeTags?: string[]
+  ): Player[] {
+    let playersInVolume: Player[] = [];
+
+    this._overworld
+      .getEntities({
+        location: _location,
+        maxDistance: _maxDistance,
+        tags: _tags,
+        excludeTags: _excludeTags,
+      })
+      .forEach((_entity) => {
+        // console.warn(_entity.nameTag + "\n");
+        if (_entity.typeId === "minecraft:player") {
+          playersInVolume.push(_entity as Player);
+        }
+      });
+
+    return playersInVolume;
+  }
   /*
 
-  let players_q0001_05 = overworld.getEntities({
-      location: { x: 248, y: -9, z: 150 },
-      maxDistance: 2,
-      tags: ["Q0000"],
-      excludeTags: ["Q0000_05", "Q0000_06"],
-    });
-
-    players_q0001_05.forEach((_entity) => {
-      console.warn(_entity.nameTag);
-      if (_entity.typeId === "minecraft:player") {
-        // console.warn("is_player");
-        _entity.addTag("Q0000_05");
-      }
-    });
   
   */
 }

@@ -21,34 +21,11 @@ export default class Quest0000 {
       Utilities.displayDialogueInit(Q0000Dialogues.insideCellDialogue(_player), _player);
     });
 
-    // Pegar informações de jogadores dentro de um espaço
-
-    // world
-    //   .getPlayers({
-    //     location: { x: 248, y: -9, z: 150 },
-    //     maxDistance: 2,
-    //     tags: ["Q0000"],
-    //     excludeTags: ["Q0000_05", "Q0000_06"],
-    //   })
-    //   .forEach((_player) => {
-    //     _player.addTag("Q0000_5");
-    //   });
-
-    // Pegar informações de jogadores dentro de um espaço
-    let players_q0001_05 = overworld.getEntities({
-      location: { x: 248, y: -9, z: 150 },
-      maxDistance: 2,
-      tags: ["Q0000"],
-      excludeTags: ["Q0000_05", "Q0000_06"],
-    });
-
-    players_q0001_05.forEach((_entity) => {
-      console.warn(_entity.nameTag);
-      if (_entity.typeId === "minecraft:player") {
-        // console.warn("is_player");
-        _entity.addTag("Q0000_05");
+    Utilities.getPlayersInVolume({ x: 248, y: -9, z: 150 }, 2, ["Q0000"], ["Q0000_05", "Q0000_06"]).forEach(
+      (player) => {
+        player.addTag("Q0000_05");
       }
-    });
+    );
 
     world.getPlayers({ tags: ["Q0000_05"] }).forEach((player) => {
       player.removeTag("Q0000_05");

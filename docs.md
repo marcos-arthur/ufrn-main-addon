@@ -156,10 +156,6 @@ world.getPlayers({ tags: ["quero_teleportar"] }).forEach((_player) => {
 O parâmetro **_facingLocation_**, vai receber a coordenada na qual ele vai ser teleportado como base somado com os valores que vão dar a coordenada para onde o jogador deve estar olhando.\
 No exemplo acima, se o jogador estiver sendo teleportado para a coordenada **{x: 10, y: 15 z: 20}**, então, ao ser teleportado, ele vai estar olhando para a coordenada **{x: 13, y: 14 z: 20}**.
 
-### Obter jogadores dentro de uma área
-
-Para obter os jogadores dentro de uma área, precisaremos utilizar dois comandos diferentes em sequência, um para obter
-
 ## Classe Utilities
 
 A classe **_Utilities_** possui funções que serão utilizadas para acelerar alguns processos durante o desenvolvimento das Quests.
@@ -169,7 +165,7 @@ Abaixo estão listadas as funções da classe e o que elas fazem.
 ### displayDialogueInit()
 
 ```js
-static async displayDialogueInit(_dialogue_list: Array<RawMessage>, _player: Player)
+static async displayDialogueInit(_dialogue_list: Array<RawMessage>, _player: Player) : void
 ```
 
 Esta função é responsável por exibir as legendas relacionadas a diálogos ou a dicas que aparecem para o jogador enquanto sem abrir nenhum popup.
@@ -208,6 +204,37 @@ const _example_dialogue_list = [
 
 world.getPlayers({ tags: ["exibir_legenda"] }).forEach((_player) => {
   Utilities.displayDialogueInit(_example_dialogue_list, _player);
+});
+```
+
+### Obter jogadores dentro de uma área
+
+### getPlayersInVolume()
+
+```js
+static async getPlayersInVolume(_location: Vector3, _maxDistance: number, _tags?: string[], _excludeTags?: string[]) : Player[]
+```
+
+Esta função é responsável por obter uma lista com todos os jogadores dentro de um volume.
+
+#### Parâmetros
+
+| Nome          | Tipo     | Descrição                                                           |
+| ------------- | -------- | ------------------------------------------------------------------- |
+| \_location    | Vector3  | Coordenadas do centro da busca.                                     |
+| \_maxDistance | number   | Raio de busca.                                                      |
+| \_Tags        | string[] | Tags para incluir somente os jogadores que as possuírem. Opicional. |
+| \_excludeTags | string[] | Tags para ignorar os jogadores que as possuírem. Opicional.         |
+
+#### Exemplo de uso
+
+No exemplo abaixo, cada jogador dentro de um raio de 3 blocos de distância do local específicado que possuir a tag Q0001 e não possuir a tag Q0001_1 será teleportado para outro local.
+
+```js
+import Utilities from "../Utilities";
+
+Utilities.getPlayersInVolume({ x: 248, y: -9, z: 187 }, 3, ["Q0001"], ["Q0001_1"]).forEach((_player) => {
+  _player.teleport({ x: 200, y: -9, z: 300 });
 });
 ```
 
@@ -255,7 +282,7 @@ Por padrão, vamos utilizamos o seguinte formato para uma fala:
 §u[NOME_DO_PERSONAGEM]: §r[FALA]
 ```
 
-Também é possível exibir o nome do jogador utilizando o seguinte comando dentro texto:
+Também é possível exibir o nome do jogador utilizando o seguinte comando dentro do texto:
 
 ```js
 ${_player.name}
