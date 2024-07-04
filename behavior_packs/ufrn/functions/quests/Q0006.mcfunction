@@ -1,0 +1,17 @@
+execute if score ufrn:subphase ufrn matches 0 run function quests/Q0006/Q0006_00
+execute if score ufrn:subphase ufrn matches 1 run function quests/Q0006/Q0006_01
+execute if score ufrn:subphase ufrn matches 2 run function quests/Q0006/Q0006_02
+execute if score ufrn:subphase ufrn matches 3 run function quests/Q0006/Q0006_03_start
+execute if score ufrn:subphase ufrn matches 4 run function quests/Q0006/Q0006_04
+execute if score ufrn:subphase ufrn matches 5 run function quests/Q0006/Q0006_05
+execute if score ufrn:subphase ufrn matches 6 run function quests/Q0006/Q0006_06
+execute if score ufrn:subphase ufrn matches 99 run function quests/Q0006/Q0006_99
+execute if score ufrn:subphase ufrn matches 200 run function quests/Q0006/Q0006_200
+execute if score ufrn:subphase ufrn matches 201 run function quests/Q0006/Q0006_201
+execute if score ufrn:subphase ufrn matches 202 run function quests/Q0006/Q0006_202
+execute if score ufrn:subphase ufrn matches 400 run function quests/Q0006/Q0006_400
+execute if score ufrn:subphase ufrn matches 401 run function quests/Q0006/Q0006_401
+execute if score ufrn:subphase ufrn matches 500 run function quests/Q0006/Q0006_500
+execute if score ufrn:subphase ufrn matches 501 run function quests/Q0006/Q0006_501
+execute if score ufrn:subphase ufrn matches 700 run function quests/Q0006/Q0006_700
+execute if score ufrn:subphase ufrn matches 701 run function quests/Q0006/Q0006_701

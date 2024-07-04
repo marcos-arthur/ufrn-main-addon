@@ -1,0 +1,1 @@
+execute positioned -220.99 -17.00 -621.12 if entity @a[tag=XQ0006,r=5,rm=0] run function event/on_subphase_complete
