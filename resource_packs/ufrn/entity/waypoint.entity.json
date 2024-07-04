@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ufrn:waypoint",
+      "materials": {
+        "back": "waypoint_back",
+        "front": "waypoint_front"
+      },
+      "textures": {
+        "book": "textures/waypoint/book",
+        "brush": "textures/waypoint/brush",
+        "crafting": "textures/waypoint/crafting",
+        "hanging_sign": "textures/waypoint/hanging_sign",
+        "lever": "textures/waypoint/lever",
+        "sleep": "textures/waypoint/sleep",
+        "torchflower": "textures/waypoint/torchflower"
+      },
+      "geometry": {
+        "default": "geometry.ufrn.waypoint"
+      },
+      "animations": {
+        "waypoint": "animation.ufrn.waypoint",
+        "hidden_controller": "controller.animation.ufrn.waypoint.hidden",
+        "hidden": "animation.ufrn.waypoint.hidden"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.icon_scale = 0.8 + (query.distance_from_camera/40);"
+        ],
+        "animate": ["waypoint", "hidden_controller"]
+      },
+      "render_controllers": ["controller.render.ufrn.waypoint"]
+    }
+  }
+}

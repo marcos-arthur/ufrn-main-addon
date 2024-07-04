@@ -1,0 +1,218 @@
+pack.description=Pacote de Recursos Minecraft UFRN
+pack.name=UFRN RP
+pack.description.modules=UFRN Pacote de Recursos
+
+## Generic
+ufrn.resistencia.name=§u§lRESISTÊNCIA §r
+ufrn.luga.name=§4§lLUGA §r
+ufrn.walkietalkie.chat.name=§5Walkie Talkie
+ufrn.unknown.chat.name=§5§k§oUnknown
+ufrn.chat.separator=§r §8§l>>§r §7
+
+ufrn.npc.btn.next=§t§lPróximo §2§l>>§r
+ufrn.npc.btn.mid=§t§lIr §2§l>>§r
+ufrn.npc.btn.reset=§t§lReiniciar
+ufrn.npc.btn.end=§6Finalizar
+### Npcs names
+ufrn.npc.combatente_silva.name=Combatente Silva
+ufrn.npc.combatente_rocha.name=Combatente Rocha
+ufrn.npc.combatente_roberto.name=Combatente Roberto
+ufrn.npc.professor_ferreira.name=Professor Ferreira
+
+## Ônibus
+ufrn.bus.route.title=§t§l▶Ônibus - UFRN§r
+ufrn.bus.route.circular.direto.subtitle=§q§l⑤⑧⑧%sCircular Direto§r
+
+##! Q0000
+### Texts
+ufrn.Q0000.unknown.1=§oEi, acorde! Você está me ouvindo?
+ufrn.Q0000.unknown.2=§oEstou falando daqui de cima, do fosso de ventilação.
+ufrn.Q0000.unknown.3=§oIrei te ajudar a fugir dessa prisão.
+ufrn.Q0000.unknown.4=§oEstou jogando um comunicador pra te ajudar.
+ufrn.Q0000.unknown.5=§oEquipe o §5Rádio Walkie Talkie§r §7§opara que possamos nos comunicar remotamente.
+ufrn.Q0000.unknown.6=§o§6SOCORRO!§r Alguém está me ouvindo?
+
+ufrn.Q0000.walkietalkie.1=Agora está me ouvindo pelo Rádio?
+ufrn.Q0000.walkietalkie.2=Pronto! Agora eu irei hackear a porta, só um instante...
+ufrn.Q0000.walkietalkie.3=Siga as minhas instruções, não quero perder §loutra pessoa§r §7durante a fuga. 
+ufrn.Q0000.walkietalkie.4=Fuja em direção ao corredor com detalhes em §2verde§r! 
+ufrn.Q0000.walkietalkie.5=Parabéns!, você conseguiu chegar no fosso do elevador. Agora §lsuba as escadas§r §7para escapar da Prisão!
+ufrn.Q0000.walkietalkie.6=Que bom que você está aqui! Eu que estava falando com você. Sou o Combatente Silva
+
+### Objectives
+ufrn.objective.Q0000.1=Equipe o §5Rádio Walkie Talkie§r
+ufrn.objective.Q0000.2=Fuja em direção ao corredor
+ufrn.objective.Q0000.3=Siga até o final do corredor e §lESPERE!
+ufrn.objective.Q0000.4=Agora vire para §l§6DIREITA§r e ande 2 blocos para frente e §lESPERE!
+ufrn.objective.Q0000.5=Vire novamente para §l§6DIREITA§r e siga até o final do corredor e §lESPERE!
+ufrn.objective.Q0000.6=Agora vire para §l§6ESQUERDA§r e siga até o final do corredor e §lESPERE!
+ufrn.objective.Q0000.7=Novamente vire para §l§6ESQUERDA§r e siga até o final do corredor e §lESPERE!
+ufrn.objective.Q0000.8=Agora vire para §l§6DIREITA§r e siga até o final do corredor e §lESPERE!
+ufrn.objective.Q0000.9=Novamente vire para §l§6DIREITA§r e siga até o final do corredor e §lESPERE!§r
+ufrn.objective.Q0000.10=Por fim vire a §l§6ESQUERDA§r e saia
+ufrn.objective.Q0000.11=§l§6Suba as escadas§r
+ufrn.objective.Q0000.12=§lSaia pela porta!§r
+ufrn.objective.Q0000.13=Converse com o §l§eCombatente Silva!§r
+
+### NPCs
+
+ufrn.npc.Q0000.combatente_silva.1=Parabéns por ter seguido minhas instruções até aqui. Você está seguro.
+ufrn.npc.Q0000.combatente_silva.2=Agora que você escapou da prisão, temos mais desafios pela frente.
+ufrn.npc.Q0000.combatente_silva.3=Vamos precisar de toda a sua habilidade para derrotar a IA que controla este lugar.
+
+### Início
+ufrn.Q0000.start.title=§l§6MISSÃO§r
+ufrn.Q0000.start.subtitle=§l§q▶ Fuga  ◀
+### Conclusão
+ufrn.Q0000.conclusion.title=§l§6MISSÃO CONCLUÍDA§r
+ufrn.Q0000.conclusion.subtitle=§l§q▶ Fuga ◀
+
+
+##! Q0001
+### Desafio
+ufrn.Q0001.wrong.direction=§4Direção Errada!
+### Texts
+ufrn.Q0001.walkietalkie.1=Checando conexão!
+ufrn.Q0001.walkietalkie.2=Aproveite para verificar as instruções nos quadros. Em caso de dúvida, volte e confira novamente.
+ufrn.Q0001.walkietalkie.3=Agora que você está no centro, eu quero que aperte a sequência de botões...
+ufrn.Q0001.walkietalkie.4=Agora vou pedir de forma aleatória!
+ufrn.Q0001.walkietalkie.5=Agora realize o desafio antes que o tempo acabe!
+ufrn.Q0001.walkietalkie.6=Muito bem, você conseguiu finalizar %1 direções!
+ufrn.Q0001.walkietalkie.7=Volte e para falar comigo o §l§eCombatente Roberto!§r
+
+
+### Objectives
+ufrn.objective.Q0001.1=Siga o caminho das luzes para chegar até o §6Relógio do Sol§r.
+ufrn.objective.Q0001.2=Converse com o §l§eCombatente Roberto!§r
+ufrn.objective.Q0001.3=Diriga-se até o centro da representação da Rosa dos Ventos.
+ufrn.objective.Q0001.4=Equipe a §4Bússola§r em sua mão!
+ufrn.objective.Q0001.5=Aperte §l§6Botão§r na direção §l§qNorte§r
+ufrn.objective.Q0001.6=Aperte §l§6Botão§r na direção §l§qLeste§r
+ufrn.objective.Q0001.7=Aperte §l§6Botão§r na direção §l§qOeste§r
+ufrn.objective.Q0001.8=Aperte §l§6Botão§r na direção §l§qSul§r
+ufrn.objective.Q0001.9=Volte e converse com o §l§eCombatente Silva!§r
+ufrn.random.objective.Q0001.1=Aperte §l§6Botão§r na direção §l§q%1§r
+
+### NPCs
+ufrn.npc.Q0001.combatente_silva.1=Podemos seguir com seu processo de se juntar à §u§lRESISTÊNCIA§r através de uma missão simples.
+ufrn.npc.Q0001.combatente_silva.2=Primeiro, precisamos ver se seus conhecimentos não foram totalmente afetados pelo §4§lLUGA§r. 
+ufrn.npc.Q0001.combatente_silva.3=Você precisa ir pras bandas do §6Relógio do Sol§r.%sLá a gente pode fazer umas verificações sobre a sua orientação espacial, que vai ser necessária pra chegar na nossa base principal.
+ufrn.npc.Q0001.combatente_silva.4=Parabéns! Você conseguiu completar o desafio! Agora sim é possível ver que você está preparado pra fazer parte da §u§lRESISTÊNCIA§r
+ufrn.npc.Q0001.combatente_silva.5=Aqui tão as suas recompensas... 5 x §2Esmeraldas§r, 10 x §4Maçãs§r e §aExperiência§r%sAhh... e pode ficar com a §4Bússola§r você vai precisar dela.
+
+### NPCs
+ufrn.npc.Q0001.combatente_roberto.1=Então você é o novo interessado em entrar na §u§lRESISTÊNCIA§r.%sPrimeiro vamos ter que realizar alguns testes de orientação espacial por meio de um desafio.
+ufrn.npc.Q0001.combatente_roberto.2=Você deverá se locomover até o centro de uma representação da rosa dos ventos que está logo aqui acima.
+ufrn.npc.Q0001.combatente_roberto.3=Uma vez ao centro você vai ver 4 Botões ao seu redor, cada um apontando para uma direção diferente dos pontos cardeais, que são §qNorte§r, §qSul§r, §qLeste§r e §qOeste§r.
+ufrn.npc.Q0001.combatente_roberto.4=Eu vou pedir para que você pressione na ordem correta.
+ufrn.npc.Q0001.combatente_roberto.5=Aqui está uma §4Bússola§r, ela vai ajudar na sua orientação 
+ufrn.npc.Q0001.combatente_roberto.6=Uma §4Bússola§r é um instrumento de navegação que utiliza uma agulha para alinhar-se com o campo magnético da Terra.%sA agulha aponta consistentemente para o norte magnético, permitindo que os usuários determinem as direções dos pontos cardeais.
+ufrn.npc.Q0001.combatente_roberto.7=Atenção, fique com o seu §5Walkie Talkie§r ligado para receber informações.
+ufrn.npc.Q0001.combatente_roberto.8=Parabéns, você conseguiu completar o desafio!%sVolte para conversar com o §eCombatente Silva§r lá ele lhe informará quais os próximos passos!%sOu então pode refazer o desafio.
+
+### Início
+ufrn.Q0001.start.title=§l§6MISSÃO§r
+ufrn.Q0001.start.subtitle=§l§q▶ Direções ◀
+### Conclusão
+ufrn.Q0001.conclusion.title=§l§6MISSÃO CONCLUÍDA§r
+ufrn.Q0001.conclusion.subtitle=§l§q▶ Direções ◀
+
+##! Q0002
+
+### Texts
+ufrn.Q0002.walkietalkie.1=Abra o §2§lMAPA§r§7 para verificar o caminho indicado.
+ufrn.Q0002.walkietalkie.2=A parada está circulado em §gLaranja§r §7no §2§lMAPA§r.
+ufrn.Q0002.walkietalkie.3=Ei, abra o mapa e verifique o caminho necessário para chegar até a parada.
+ufrn.Q0002.walkietalkie.4=Você pode estar tendo dificuldade em encontrar a parada. Irei habilitar o caminho de luzes para chegar até a parada.
+ufrn.Q0002.walkietalkie.5=Você parece estar com muita dificulade em encontrar a parada. Volte do início para recomeçar.
+ufrn.Q0002.walkietalkie.6=Que bom! Finalmente você chegou até a parada de ônibus!
+ufrn.Q0002.walkietalkie.7=Agora escolha a melhor rota para chegar até o §t§lIMD§r.
+ufrn.Q0002.walkietalkie.8=Muito bem, você chegou na zona de proteção da §u§lRESISTÊNCIA§r.
+ufrn.Q0002.walkietalkie.9=Converse com o §l§eCombatente Rocha!§r §7que está recepcionando os novos integrantes da §u§lRESISTÊNCIA§r.
+ufrn.Q0002.walkietalkie.10=Abra o §2§lMAPA 1§r §7para verificar o caminho indicado pelo tracejado.
+ufrn.Q0002.walkietalkie.11=Para chegar no §t§lIMD§r §7siga pela indicação da §6Seta Laranja§r §7no §2§lMAPA 1§r.
+ufrn.Q0002.walkietalkie.12=Logo depois, vá até a indicação do §t§lIMD§r §7circulado em §gLaranja§r.
+ufrn.Q0002.walkietalkie.13=Ande até a indicação do §t§lIMD§r §7circulado em §gLaranja§r.
+
+### Objetivos
+ufrn.objective.Q0002.1=Dirija-se até a parada e pegue o §l§6Ônibus§r para o §t§lIMD§r.
+ufrn.objective.Q0002.2=Aperte o §l§6Botão§r na lateral do §l§6Ônibus§r para entrar.
+ufrn.objective.Q0002.3=Converse com o §l§eCombatente Rocha!§r
+ufrn.objective.Q0002.4=Dirija-se até o §t§lIMD§r.
+ufrn.objective.Q0002.5=Converse com o §l§qProfessor Ferreira§r
+
+### NPCs
+ufrn.npc.Q0002.combatente_silva.1=Pronto, agora que você possui esses itens em mãos, deverá se direcionar até a nossa base que se encontra no §t§lInstituto Metrópole Digital - IMD§r.
+ufrn.npc.Q0002.combatente_silva.2=Para conseguir chegar lá, você deverá seguir alguns procedimentos básicos de segurança para evitar que seja capturado novamente pelo §4§lLUGA§r e seus §4§lLUGABOTS§r.
+ufrn.npc.Q0002.combatente_silva.3=Preste bastante atenção nas seguintes instruções.%sVocê deverá andar até a parada de ônibus e, depois, pegar o §l§6Ônibus§r. Ele irá te deixar em um local próximo ao §t§lIMD§r. %sE, a partir deste ponto, você estará em uma área segura.
+ufrn.npc.Q0002.combatente_silva.4=Entretanto, no caminho existem vários §4§lLUGABOTS§r - siga com cautela!%s%sSe por acaso estiver perto de um, mova-se lentamente e se abaixe para que eles não percebam sua presença.
+ufrn.npc.Q0002.combatente_silva.5=Se você for avistado, eu sugiro que §l§6CORRA§r o mais rápido que puder para o ponto de ônibus antes que o §4§lLUGABOT§r possa lhe alcançar.
+ufrn.npc.Q0002.combatente_silva.6=Por fim, antes de subir no §l§6Ônibus§r, cheque se a rota daquele ônibus é a que você pretende seguir para o local do seu destino.%sE depois siga até o §t§lIMD§r.
+ufrn.npc.Q0002.combatente_silva.7=Ao chegar no Instituto, fale com o §q§lProfessor Ferreira§r. Ele estará lhe esperando na entrada. 
+
+ufrn.npc.Q0002.combatente_rocha.1=Que bom que você chegou até aqui. Bom, este é o território dominado pela resistência contra o domínio da §4§lLUGA§r.
+ufrn.npc.Q0002.combatente_rocha.2=Aqui nós estamos lutando para sobreviver. Você pode conhecer mais sobre quem é §4§lLUGA§r com o §q§lProfessor Ferreira§r, ele pode te explicar melhor. Para isso, você precisa se encaminhar para o §t§lInstituto Metrópole Digital - IMD§r, ele está te esperando por lá.
+ufrn.npc.Q0002.combatente_rocha.3=Outra coisa, deixa eu só ver se seu localizador que foi implantado em você ficou desativado com sua entrada em nosso território. Ahhh! Foi sim, ótimo! depois você vai remover esse localizador no §t§lInstituto do Cérebro - ICE§r
+ufrn.npc.Q0002.combatente_rocha.4=Bom. Siga esse caminho para chegar no até o §t§lIMD§r, estão te esperando por lá, utilize esse novo §2§lMAPA§r para se localizar.
+
+ufrn.npc.Q0002.professor_ferreira.1=Olá, eu estava aguardando a sua chegada. Recebi informações do §q§lCombatente Silva§r, um mais cedo de que um novo recruta chegaria nesta base logo hoje.
+ufrn.npc.Q0002.professor_ferreira.2=Não sei se você já ouviu falar de mim, mas sou o Professor Ferreira - Líder da Resistência contra a inteligência artificial §4§lLUGA§r. Porém, pode me chamar apenas de Professor.
+ufrn.npc.Q0002.professor_ferreira.3=Sinta-se bem-vindo.
+
+### Início
+ufrn.Q0002.start.title=§l§6MISSÃO§r
+ufrn.Q0002.start.subtitle=§l§q▶ Jornada até o IMD ◀
+### Conclusão
+ufrn.Q0002.conclusion.title=§l§6MISSÃO CONCLUÍDA§r
+ufrn.Q0002.conclusion.subtitle=§l§q▶ Jornada até o IMD ◀
+
+##! Q0006
+
+### Texts
+ufrn.Q0006.walkietalkie.1=Oi, aqui é o §l§qProfessor Ferreira§r §7de novo! Olhe as luzes na recepção. Ao final todas devem estar ativadas.
+ufrn.Q0006.walkietalkie.2=Observe o §2§lMAPA§r§7, eu marquei quais torres você deve subir, pra não peder tempo. 
+ufrn.Q0006.walkietalkie.3=Enquanto você tá aí arrumando os §5Robôs Sentinelas§r§7, dá uma olhada nos números dos códigos de ativação, tá? Anota direitinho, porque isso vai ser importante mais tarde. 
+ufrn.Q0006.walkietalkie.4=Fica ligado nos códigos do §5Robô Sentinela§r §7que tá mais pro §l§2Norte§r §7e pro §l§2Leste§r. §7Pode parecer bobagem agora, mas confia em mim, você vai precisar dessa informação depois!
+ufrn.Q0006.walkietalkie.5=Não esqueça de prestar atenção nos códigos.
+ufrn.Q0006.walkietalkie.6=Vamos lá! o tempo está quase acabando.
+ufrn.Q0006.walkietalkie.7=Essa é a torre de principal de ligação. Para configurala você precisa dos códigos de ativação das torres mais ao §l§2Norte§r §7e mais ao §l§2Leste§r.
+ufrn.Q0006.walkietalkie.8=
+ufrn.Q0006.walkietalkie.9=Você encontrou uma torre que precisa subir.
+ufrn.Q0006.walkietalkie.10=Acione a §5Alavanca§r §7para acessar o §5Robô Sentinela§r §7e informe o código que está por perto.
+ufrn.Q0006.walkietalkie.11=Muito bem, torre ativada! Não se esqueça de ativar a §5Alavanca§r §7depois de inserir o código.
+ufrn.Q0006.walkietalkie.12=Muito bem, você conseguiu terminar antes do tempo acabar. Agora venha falar comigo!
+ufrn.Q0006.walkietalkie.13=Infelizmente você não conseguiu terminar antes do tempo acabar. Venha falar comigo para tentar novamente!
+
+
+ufrn.objective.Q0006.1=Converse com o §l§qProfessor Ferreira§r.
+ufrn.objective.Q0006.2=Conserte os §5Robôs Sentinelas§r nas torres marcadas no §2§lMAPA§r.
+ufrn.objective.Q0006.3=Converse com o §l§qProfessor Ferreira§r.
+
+ufrn.npc.Q0006.professor_ferreira.1=E aí, tudo certo? Preciso da sua ajuda para consertar alguns §5Robôs Sentinelas§r que estão pifados e devem ser configurados manualmente.
+ufrn.npc.Q0006.professor_ferreira.2=Veja nesse novo §2§lMAPA§r quais torres devem ser configuradas.
+ufrn.npc.Q0006.professor_ferreira.3=Para isso, suba nas torres ative a §5Alavanca§r para acessar e interagir com robô e inserir o código correto que deixamos logo ao lado.%sE não se esqueça de ativar novamente a §5Alavanca§r depois de inserir o código.
+ufrn.npc.Q0006.professor_ferreira.4=A cada nova ligação, uma luz que representa uma sentinela vai ligar logo aqui ao lado na reccepção.
+ufrn.npc.Q0006.professor_ferreira.5=Temos um tempo limitado pra isso, então fica de olho no cronômetro e manda ver nos reparos, beleza? Qualquer dúvida, é só vir falar comigo!
+ufrn.npc.Q0006.professor_ferreira.6=Você precisa configurar os §5Robôs Sentinelas§r nas torres que estão marcadas no §2Sentinelas -> IMD§r.%sPara isso, suba nas torres ative a §5Alavanca§r para acessar e interagir com robô e inserir o código correto que deixamos logo ao lado.
+
+## Terminado Dentro do Tempo
+ufrn.npc.Q0006.professor_ferreira.7=Parabéns, você conseguiu consertar todos os §5Robôs Sentinelas§r a tempo! Seu desempenho foi incrível, e graças a você, nossas torres estão operacionais novamente.
+ufrn.npc.Q0006.professor_ferreira.8=Aqui está sua recompensa pelo excelente trabalho: 5 x §2Esmeraldas§r, 10 x §4Maçãs§r e §aExperiência§r para te ajudar nas próximas missões. Continue assim e teremos grandes conquistas pela frente!
+ufrn.npc.Q0006.professor_ferreira.9=Muito obrigado pela sua ajuda! Se precisar de mais alguma coisa, você sabe onde me encontrar. Até a próxima missão!
+
+## Terminado Fora do Tempo
+ufrn.npc.Q0006.professor_ferreira.10=Poxa, infelizmente o tempo acabou e não conseguimos consertar todos os §5Robôs Sentinelas§r. Mas não desanime!
+ufrn.npc.Q0006.professor_ferreira.11=Você fez um bom esforço e isso já é muito importante. Vamos analisar o que deu errado e tentar novamente.
+ufrn.npc.Q0006.professor_ferreira.12=Se precisar de alguma dica ou ajuda, estou aqui para te apoiar. Na próxima, tenho certeza de que conseguiremos! Boa sorte e não desista!
+
+ufrn.sentinela.Q0006=§l§5Robô Sentinela§r%s§2Ativado
+
+### Início
+ufrn.Q0006.start.title=§l§6MISSÃO§r
+ufrn.Q0006.start.subtitle=§l§q▶ Reparos no IMD ◀
+### Conclusão
+ufrn.Q0006.conclusion.title=§l§6MISSÃO CONCLUÍDA§r
+ufrn.Q0006.conclusion.subtitle=§l§q▶ Reparos no IMD ◀
+### Falha
+ufrn.Q0006.failed.title=§l§4MISSÃO§r
+ufrn.Q0006.failed.subtitle=§l§n▶ Fracassada ◀

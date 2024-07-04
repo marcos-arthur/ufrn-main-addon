@@ -1,0 +1,51 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ufrn.waypoint.hidden": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "hidden": "query.distance_from_camera<=8"
+            },
+            {
+              "hidden_far": "query.is_tamed&&query.distance_from_camera>=20"
+            },
+            {
+              "visible": "query.distance_from_camera>8"
+            }
+          ]
+        },
+        "visible": {
+          "blend_transition": 0.05,
+          "transitions": [
+            {
+              "hidden": "query.distance_from_camera<=8"
+            },
+            {
+              "hidden_far": "query.is_tamed&&query.distance_from_camera>=20"
+            }
+          ]
+        },
+        "hidden": {
+          "blend_transition": 0.05,
+          "animations": ["hidden"],
+          "transitions": [
+            {
+              "visible": "query.distance_from_camera>8"
+            }
+          ]
+        },
+        "hidden_far": {
+          "blend_transition": 0.05,
+          "animations": ["hidden"],
+          "transitions": [
+            {
+              "visible": "query.distance_from_camera<20"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

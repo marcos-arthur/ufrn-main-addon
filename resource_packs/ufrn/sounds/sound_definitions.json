@@ -1,7 +1,7 @@
 {
   "format_version": "1.20.20",
   "sound_definitions": {
-    "ufrnsoundfx:walkietalkie": {
+    "ufrn:walkietalkie_fx": {
       "sounds": [
         {
           "name": "sounds/fx/walkie_talkie",
@@ -11,7 +11,7 @@
         }
       ]
     },
-    "ufrnsoundfx:hint": {
+    "ufrn:hint_fx": {
       "sounds": [
         {
           "name": "sounds/fx/hint",
@@ -24,6 +24,56 @@
           "is3D": false,
           "volume": 1,
           "pitch": 0.6
+        }
+      ]
+    },
+    "ufrn:mission_completed": {
+      "sounds": [
+        {
+          "name": "sounds/fx/mission_completed",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "ufrn:mission_start": {
+      "sounds": [
+        {
+          "name": "sounds/fx/mission_start",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "ufrn:mission_failed": {
+      "sounds": [
+        {
+          "name": "sounds/fx/mission_failed",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "ufrn:sentinela_error": {
+      "sounds": [
+        {
+          "name": "sounds/fx/sentinela_error",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
+        }
+      ]
+    },
+    "ufrn:sentinela_starting": {
+      "sounds": [
+        {
+          "name": "sounds/fx/sentinela_starting",
+          "is3D": false,
+          "volume": 1,
+          "pitch": 1.0
         }
       ]
     }

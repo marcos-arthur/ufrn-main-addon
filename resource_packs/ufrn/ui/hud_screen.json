@@ -1,0 +1,177 @@
+{
+  "anim_black_fader_in": {
+    "anim_type": "alpha",
+    "easing": "in_cubic",
+    "duration": 4.5,
+    "from": 0,
+    "to": 1,
+    "next": "@hud.anim_black_fader_hold"
+  },
+  "anim_black_fader_hold": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@hud.anim_black_fader_out"
+  },
+  "anim_black_fader_out": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 2,
+    "from": 1,
+    "to": 0
+  },
+  "anim_black_fader_in_long": {
+    "anim_type": "alpha",
+    "easing": "out_cubic",
+    "duration": 6,
+    "from": 0,
+    "to": 1,
+    "next": "@hud.anim_black_fader_out_long"
+  },
+  "anim_black_fader_out_long": {
+    "anim_type": "alpha",
+    "easing": "in_cubic",
+    "duration": 4,
+    "from": 1,
+    "to": 0
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": [
+          {
+            "hud_quest_text@hud_quest_text": {}
+          },
+          {
+            "hud_title_custom": {
+              "type": "panel",
+              "factory": {
+                "name": "hud_actionbar_text_factory",
+                "control_ids": {
+                  // Use our custom component
+                  "hud_actionbar_text": "hud_actionbar_text@hud.hive_special_actionbar"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  // Hide the potion effect icons
+  "mob_effects_renderer": {
+    "alpha": 0
+  },
+  "hud_quest_text": {
+    "type": "panel",
+    "$flag_title": "§m§c",
+    "controls": [
+      {
+        "hud_quest_text_inner@hud_quest_text_inner": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "data_control_parent",
+              "resolve_sibling_scope": true,
+              "source_property_name": "#quest_text",
+              "target_property_name": "#text"
+            },
+            {
+              "source_property_name": "(not ((#text - $flag_title) = #text))) and ((#text - '§h§i§v§e') = #text) and (not ((#text - $flag_title) = ''))))",
+              "binding_type": "view",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "data_control_parent": {
+          "type": "panel",
+          "size": [0, 0],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#quest_text",
+              "binding_condition": "visibility_changed"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#hud_title_text_string = #quest_text) and not ((#hud_title_text_string - $flag_title) = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "hud_quest_text_inner": {
+    "$flag_title": "§m§c",
+    "type": "image",
+    "size": ["100%cm + 30px", "100%cm + 10px"],
+    "offset": [0, "35px"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "texture": "textures/ui/hud_tip_text_background",
+    "alpha": 0.7,
+    "controls": [
+      {
+        "icon": {
+          "type": "image",
+          "size": [12, 12],
+          "offset": [5, 0],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "layer": 1,
+          "texture": "textures/ui/icon_objective"
+        }
+      },
+      {
+        "quest_message": {
+          "offset": [22, 0],
+          "max_size": ["200px", "default"],
+          "type": "label",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "color": "$tool_tip_text",
+          "layer": 1,
+          "text": "#text",
+          "localize": false,
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "data_control",
+              "resolve_sibling_scope": true,
+              "source_property_name": "(#quest_text - $flag_title)",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "data_control": {
+          "type": "panel",
+          "size": [0, 0],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_name": "#hud_title_text_string",
+              "binding_name_override": "#quest_text",
+              "binding_condition": "visibility_changed"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not (#hud_title_text_string = #quest_text) and not ((#hud_title_text_string - $flag_title) = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "light_beam:entity": {
+            "+defines": [
+                "ENABLE_FOG"
+            ],
+            "+states": [
+                "Blending",
+                "DisableCulling",
+                "DisableDepthWrite"
+            ],
+            "blendSrc": "SourceAlpha",
+            "blendDst": "OneMinusSrcAlpha"
+        },
+        "waypoint:entity_alphatest": {
+            "+states": [
+                "DisableDepthTest",
+                "DisableDepthWrite",
+                "DisableAlphaWrite"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "depthFunc": "Always",
+            "depthBias": 99999500
+        },
+        "waypoint_back:waypoint": {
+            "depthBias": 99000
+        },
+        "waypoint_front:waypoint": {
+            "depthBias": 99999999
+        }
+    }
+}

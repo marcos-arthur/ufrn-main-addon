@@ -1,0 +1,32 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.ufrn.waypoint": {
+      "arrays": {
+        "textures": {
+          "array.textures": [
+            "Texture.book",
+            "Texture.brush",
+            "Texture.crafting",
+            "Texture.hanging_sign",
+            "Texture.lever",
+            "Texture.sleep",
+            "Texture.torchflower"
+          ]
+        }
+      },
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "material.back"
+        },
+        {
+          "front": "material.front"
+        }
+      ],
+      "textures": ["array.textures[query.variant]"],
+      "light_color_multiplier": 1,
+      "ignore_lighting": true
+    }
+  }
+}

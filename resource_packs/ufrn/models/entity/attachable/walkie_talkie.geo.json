@@ -1,0 +1,69 @@
+{
+	"format_version": "1.19.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.walkie_talkie",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root_item",
+					"pivot": [0, 0, 0],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-4, 0, -1.5], "size": [6, 10, 2], "uv": [1, 3]},
+						{"origin": [-3.75, 5.5, 1], "size": [5.5, 4, -2], "uv": [20, 21]}
+					]
+				},
+				{
+					"name": "antenna",
+					"parent": "root_item",
+					"pivot": [-2, 1, 0],
+					"cubes": [
+						{
+							"origin": [0.5, 6, -1.3],
+							"size": [1, 9, 1],
+							"uv": {
+								"north": {"uv": [28, 11], "uv_size": [2, 1]},
+								"east": {"uv": [31, 16], "uv_size": [1, 1]},
+								"south": {"uv": [31, 11], "uv_size": [1, 1]},
+								"west": {"uv": [31, 14], "uv_size": [1, 1]},
+								"up": {"uv": [30, 15], "uv_size": [0, 0]},
+								"down": {"uv": [29, 14], "uv_size": [0, 0]}
+							}
+						},
+						{"origin": [-2.5, 6, -1.3], "size": [1, 6, 1], "uv": [28, 14]}
+					]
+				},
+				{
+					"name": "btns",
+					"parent": "root_item",
+					"pivot": [0, -2, 0]
+				},
+				{
+					"name": "btn_up",
+					"parent": "btns",
+					"pivot": [0, -2, 0],
+					"cubes": [
+						{"origin": [0.25, 4, 0], "size": [1, 1, 1], "uv": [28, 2]},
+						{"origin": [-3.25, 4, 0], "size": [1, 1, 1], "uv": [28, 2]}
+					]
+				},
+				{
+					"name": "btn_up2",
+					"parent": "btns",
+					"pivot": [0, -4, 0],
+					"cubes": [
+						{"origin": [0.25, 2.5, 0], "size": [1, 1, 1], "uv": [28, 2]},
+						{"origin": [-3.25, 2.5, 0], "size": [1, 1, 1], "uv": [28, 2]}
+					]
+				}
+			]
+		}
+	]
+}
