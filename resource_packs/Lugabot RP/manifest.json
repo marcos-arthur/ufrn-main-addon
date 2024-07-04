@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"bridge."
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.22"
+			],
+			"dash": [
+				"github:bridge-core/dash-compiler#8fa35c73292f6382747d0f411fca26431a6d2c8e"
+			]
+		}
+	},
+	"header": {
+		"name": "Lugabot",
+		"description": "",
+		"min_engine_version": [
+			1,
+			20,
+			80
+		],
+		"uuid": "bc8c7c5f-cbc9-4a33-aa95-d64974a8d802",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "f4af8563-66e8-4245-a16a-d2ce0919427f",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "e0c63785-842b-4771-a09b-a61efb11ced0",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}
