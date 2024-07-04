@@ -1,0 +1,1 @@
+playsound random.toast @initiator ~ ~ ~ 1 0.65
