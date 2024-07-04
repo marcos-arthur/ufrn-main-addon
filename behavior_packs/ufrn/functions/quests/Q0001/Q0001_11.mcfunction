@@ -1,0 +1,4 @@
+execute if block 317 -12 280 minecraft:polished_blackstone_button["button_pressed_bit"=true,"facing_direction"=1] run function event/on_subphase_complete
+execute if block 323.45 -12.00 286.53 minecraft:polished_blackstone_button["button_pressed_bit"=true,"facing_direction"=1] run titleraw @a actionbar {"rawtext":[{"translate":"ufrn.Q0001.wrong.direction"}]}
+execute if block 311.53 -12.00 286.52 minecraft:polished_blackstone_button["button_pressed_bit"=true,"facing_direction"=1] run titleraw @a actionbar {"rawtext":[{"translate":"ufrn.Q0001.wrong.direction"}]}
+execute if block 317.57 -12.00 292.38 minecraft:polished_blackstone_button["button_pressed_bit"=true,"facing_direction"=1] run titleraw @a actionbar {"rawtext":[{"translate":"ufrn.Q0001.wrong.direction"}]}

@@ -1,0 +1,3 @@
+gamerule sendcommandfeedback false
+gamerule commandblockoutput false
+scoreboard objectives setdisplay sidebar

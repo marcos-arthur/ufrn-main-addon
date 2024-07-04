@@ -1,0 +1,2 @@
+execute if entity @a[tag=Q0001_01] run dialogue open @e[name=combatente_roberto] @a roberto_scene_1_Q0001
+execute if entity @a[tag=Q0001_02] run dialogue open @e[name=combatente_roberto] @a roberto_scene_8_Q0001

@@ -1,0 +1,1 @@
+scoreboard players set ufrn:timer_enabled ufrn 1

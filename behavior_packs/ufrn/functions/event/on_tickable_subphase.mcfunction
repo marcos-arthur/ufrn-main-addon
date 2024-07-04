@@ -1,0 +1,1 @@
+scoreboard players set ufrn:subphase_tick_enabled ufrn 1
