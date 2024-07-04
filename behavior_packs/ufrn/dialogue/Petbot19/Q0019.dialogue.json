@@ -1,0 +1,22 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0019_Introdução",
+        "npc_name": "Petbot19",
+        "text": "Recebi um chamado de um resistente do Ginásio! Você precisa ir lá! Procure por Luiz, ele está perto da entrada.",
+        "buttons": [
+          {
+            "name": "Irei agora!",
+            "commands": [
+              "/tag @initiator add Q0019",
+              "/dialogue change @e[tag=luizinicial] q0019_Luiz @initiator",
+              "/summon ufrn:waypoint 127.28 2.23 -226.60 0 0 ufrn:sleep"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

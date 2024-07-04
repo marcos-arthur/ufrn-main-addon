@@ -1,0 +1,45 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0019_Maquina",
+        "npc_name": "Maquina",
+        "text": "Para desativar, insira a senha correta. Das imagens ao lado no mural, quais delas possuem duas figuras convexas e uma não convexa. Selecione a opção correta.",
+        "buttons": [
+          {
+            "name": "B",
+            "commands": [
+              "/tag @initiator remove Q0019_2",
+              "/tag @initiator add Q0019_3",
+              "/dialogue open @s @initiator q0019_Maquina1"
+            ]
+          },
+          {
+            "name": "A"
+          },
+          {
+            "name": "C"
+          }
+        ]
+      },
+      {
+        "scene_tag": "q0019_Maquina1",
+        "npc_name": "Maquina",
+        "text": "Opção correta! Desativando em 3...2...1.",
+        "buttons": [
+          {
+            "name": "Consegui!",
+            "commands": [
+              "/tag @initiator remove Q0019_3",
+              "/tag @initiator add Q0019_4",
+              "/dialogue change @e[tag=luizfinal] q0019_Luiz3 @initiator",
+              "/event entity @e[type=ufrn:waypoint,r=5] ufrn:despawn",
+              "/summon ufrn:waypoint 127.19 2.45 -226.69 0 0 ufrn:lever"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0012_Charles",
+				"npc_name": "Charles",
+				"text": "Olá! Pelo jeito encontraram alguém para recuperar os livros. Estes livros tem informações para ajudar a derrotar mais facilmente os lugabots.",
+				"buttons": [
+					{
+						"name": "Certo",
+						"commands": ["/tag @initiator add Q0012_1",
+						"/dialogue open @s @initiator q0012_Charles1"
+						]
+						
+						
+					}
+				]
+			},
+			{
+				"scene_tag": "q0012_Charles1",
+				"npc_name": "Charles",
+				"text": "Então, ao entrar na biblioteca lembre-se que o bloco “estante” sem livro no canto inferior esquerdo marca a coordenada (0,0). O bloco “estante” que contém a passagem secreta está na coordenada (2,1). Você precisa tirar o livro marrom desta estante para abrir a passagem secreta.",
+				"buttons": [
+					{
+						"name": "Entendi!Obrigado!",
+						"commands": ["/tag @initiator remove Q0012_1",
+						"/tag @initiator add Q0012_2",
+						"/dialogue open @s @initiator q0012_Charles2"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0012_Charles2",
+				"npc_name": "Charles",
+				"text": "Procure na sala secreta o báu que contêm os livros com informações secretas da Luga. Se tiver alguma dúvida veja este mural ao lado pode te ajudar. Você pode ficar com tudo que achar no báu. ",
+				"buttons": [
+					{
+						"name": "Ok!",
+						"commands": ["/tag @initiator remove Q0012_2",
+						"/tag @initiator add Q0012_3"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0012_Charles3",
+				"npc_name": "Charles",
+				"text": "Quando terminar, se dirija ao centro de convivência, a construção atrás da biblioteca. Precisam de sua ajuda lá! As coordenadas são 400, -22, 152.",
+				"buttons": [
+					{
+						"name": "Ok!",
+						"commands": ["/tag @initiator remove Q0012_3",
+						"/tag @initiator remove Q0012"
+						]
+					}
+				]
+			}
+
+    ]
+  } 
+}

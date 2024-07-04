@@ -1,0 +1,36 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+          "scene_tag": "q0018_Antônio",
+          "npc_name": "Antônio",
+          "text": "Quem é você ? ",
+          "buttons": [
+            {
+              "name": "Resistente.",
+              "commands": [
+              "/tag @initiator remove Q0018_1",
+              "/tag @initiator add Q0018_2",
+            "/dialogue open @s @initiator q0018_Antônio1"]
+            }
+          ]
+        },
+        {
+          "scene_tag": "q0018_Antônio1",
+          "npc_name": "Antônio",
+          "text": "Graças a Deus! Não sei se iria continuar vivo, estou muito fraco. Alguns lugabots apareceram do nada e me atacaram, consegui escapar mas fui machucado. Precisamos sair daqui e levar o item que resgatei. \n",
+          "buttons": [
+            {
+              "name": "Vamos voltar!",
+              "commands": [
+              "/tag @initiator remove Q0018_2",
+              "/tag @initiator add Q0018_3",
+              "/tp @initiator 275 -17 -226",
+              "/dialogue change @e[tag=fabiofinal] q0018_Fábio3 @initiator"]
+            }
+          ]
+          }
+          ]
+        }
+      }

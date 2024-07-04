@@ -1,0 +1,99 @@
+{
+  "format_version": "1.20.41",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "ferreira_scene_1_Q0002",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.professor_ferreira.name"
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0002.professor_ferreira.1",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "translate": "ufrn.npc.btn.next"
+                }
+              ]
+            },
+            "commands": ["/dialogue open @s @initiator ferreira_scene_2_Q0002"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "ferreira_scene_2_Q0002",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.professor_ferreira.name",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0002.professor_ferreira.2",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "translate": "ufrn.npc.btn.next"
+                }
+              ]
+            },
+            "commands": ["/dialogue open @s @initiator ferreira_scene_3_Q0002"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "ferreira_scene_3_Q0002",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.professor_ferreira.name",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0002.professor_ferreira.3",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": {
+              "rawtext": [
+                {
+                  "translate": "ufrn.npc.btn.end"
+                }
+              ]
+            },
+            "commands": ["/function npcs/professor_ferreira/Q0002/end"]
+          }
+        ]
+      }
+    ]
+  }
+}

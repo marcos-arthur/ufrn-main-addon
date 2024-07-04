@@ -1,35 +1,17 @@
 {
   "format_version": 2,
   "header": {
-    "name": "UFRN Addon",
-    "description": "Configurações do mundo",
-    "uuid": "5f4ddb2c-614e-4674-ba50-2c482c2a7989",
-    "version": [1, 0, 0],
-    "min_engine_version": [1, 20, 80]
+    "description": "Pacote de Comportamento Minecraft UFRN",
+    "name": "UFRN BP",
+    "uuid": "b74f8af7-0094-43d9-8980-c2a2fecd2671",
+    "min_engine_version": [1, 20, 10],
+    "version": [1, 0, 0]
   },
   "modules": [
     {
-      "description": "Script resources",
-      "language": "javascript",
-      "type": "script",
-      "uuid": "96100c25-1ed0-4e6f-b18e-1ec0726809a1",
-      "version": [1, 0, 0],
-      "entry": "scripts/main.js"
-    }
-  ],
-  "dependencies": [
-    {
-      "module_name": "@minecraft/server",
-      "version": "1.9.0"
-    },
-    {
-      "uuid": "18a77556-b84f-478c-a1aa-17b5599dbc1a",
+      "type": "data",
+      "uuid": "a84fac04-550f-4ff2-a066-54b7b0536e00",
       "version": [1, 0, 0]
     }
-  ],
-  "metadata": {
-    "generated_with": {
-      "blockbench_block_wizard": ["1.2.2"]
-    }
-  }
+  ]
 }

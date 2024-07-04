@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.41",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "sentinela_scene_1_Q0006",
+
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.sentinela.Q0006",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "buttons": []
+      }
+    ]
+  }
+}

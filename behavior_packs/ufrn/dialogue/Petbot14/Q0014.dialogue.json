@@ -1,0 +1,22 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0014_Introdução",
+        "npc_name": "Petbot14",
+        "text": "Recebi um chamado no estacionamento da Reitoria! Você precisa ir lá! Procure por Marcos, ele está no estacionamento perto da caixa d'água na coordenada 128, -16, 341",
+        "buttons": [
+          {
+            "name": "Irei agora!",
+            "commands": [
+              "/tag @initiator add Q0014",
+              "/dialogue change @e[tag=marcosinicial] q0014_Marcos @initiator",
+              "/summon ufrn:waypoint 125.54 -13.44 342.57 0 0 ufrn:sleep"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

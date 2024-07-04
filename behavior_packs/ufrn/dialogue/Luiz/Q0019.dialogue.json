@@ -1,0 +1,67 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0019_Luiz",
+        "npc_name": "Luiz",
+        "text": "Oi! Foi você que enviaram para desativar a máquina que está atrapalhando as comunicações? ",
+        "buttons": [
+          {
+            "name": "Sim",
+            "commands": [
+              "/tag @initiator add Q0019_1",
+              "/dialogue open @s @initiator q0019_Luiz1"
+            ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "q0019_Luiz1",
+        "npc_name": "Luiz",
+        "text": "A máquina está nos arredores do prédio, a direita, e ela precisa de uma senha composta por figuras convexas e não convexas para ser desativada, é necessário inserir uma sequência correta para desarmá-la.",
+        "buttons": [
+          {
+            "name": "Certo",
+            "commands": [
+              "/tag @initiator remove Q0019_1",
+              "/tag @initiator add Q0019_2",
+              "/dialogue open @s @initiator q0019_Luiz2",
+              "/dialogue change @e[tag=maquinainicial] q0019_Maquina @initiator"
+            ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "q0019_Luiz2",
+        "npc_name": "Luiz",
+        "text": "Nesse mural ao lado tem uns conceitos interessantes sobre figuras que eu achei. Quando desativá-la venha me avisar, ok?",
+        "buttons": [
+          {
+            "name": "Ok!",
+            "commands": [
+              "/event entity @e[type=ufrn:waypoint,r=5] ufrn:despawn",
+              "/summon ufrn:waypoint 165.52 -2.09 -248.68 0 0 ufrn:sleep"
+            ]
+          }
+        ]
+      },
+      {
+        "scene_tag": "q0019_Luiz3",
+        "npc_name": "Luiz",
+        "text": "Você conseguiu! Parabéns! Fique com isto como recompensa!",
+        "buttons": [
+          {
+            "name": "Ok!",
+            "commands": [
+              "/tag @initiator remove Q0019_4",
+              "/tag @initiator remove Q0019",
+              "/give @initiator bow",
+              "/event entity @e[type=ufrn:waypoint,r=5] ufrn:despawn"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

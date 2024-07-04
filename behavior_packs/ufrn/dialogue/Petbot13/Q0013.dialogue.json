@@ -1,0 +1,20 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0013_Introdução",
+				"npc_name": "Petbot13",
+				"text": "Recebi um chamado da Luiza no Centro de Convivência! Você precisa ir lá! Ela está a direita deste local.",
+				"buttons": [
+					{
+						"name": "Irei agora!",
+						"commands": [
+						"/tag @initiator add Q0013",
+						"/dialogue change @e[tag=luizainicial] q0013_Luiza @initiator"]
+					}
+				]
+			}
+    ]
+    }
+}

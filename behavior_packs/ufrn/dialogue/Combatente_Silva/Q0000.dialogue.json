@@ -1,0 +1,78 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "silva_scene_1_Q0000",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.combatente_silva.name"
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0000.combatente_silva.1"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": { "rawtext": [{ "translate": "ufrn.npc.btn.next" }] },
+            "commands": ["/dialogue open @s @initiator silva_scene_2_Q0000"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "silva_scene_2_Q0000",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.combatente_silva.name",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0000.combatente_silva.2"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": { "rawtext": [{ "translate": "ufrn.npc.btn.next" }] },
+            "commands": ["/dialogue open @s @initiator silva_scene_3_Q0000"]
+          }
+        ]
+      },
+      {
+        "scene_tag": "silva_scene_3_Q0000",
+        "npc_name": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.combatente_silva.name",
+              "with": ["\n"]
+            }
+          ]
+        },
+        "text": {
+          "rawtext": [
+            {
+              "translate": "ufrn.npc.Q0000.combatente_silva.3"
+            }
+          ]
+        },
+        "buttons": [
+          {
+            "name": { "rawtext": [{ "translate": "ufrn.npc.btn.end" }] },
+            "commands": ["/function npcs/combatente_silva/Q0000/end"]
+          }
+        ]
+      }
+    ]
+  }
+}

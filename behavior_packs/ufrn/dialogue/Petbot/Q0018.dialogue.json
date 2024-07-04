@@ -1,0 +1,20 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0018_Introdução",
+				"npc_name": "Petbot",
+				"text": "Recebi um chamado de ajuda no campo de futebol! Você precisa ir lá!",
+				"buttons": [
+					{
+						"name": "Irei agora!",
+						"commands": [
+						"/tag @initiator add Q0018",
+						"/dialogue change @e[tag=fabiofinal] q0018_Fábio @initiator"]
+					}
+				]
+			}
+    ]
+    }
+}

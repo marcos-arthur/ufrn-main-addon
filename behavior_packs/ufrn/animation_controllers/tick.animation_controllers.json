@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ufrn.tick.commands": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "interact": "query.is_tamed"
+            }
+          ]
+        },
+        "interact": {
+          "on_entry": ["/function on_second", "@s ufrn:ran_command"],
+          "transitions": [
+            {
+              "default": "!query.is_tamed"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

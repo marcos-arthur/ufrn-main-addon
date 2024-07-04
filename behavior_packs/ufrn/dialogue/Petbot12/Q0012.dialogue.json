@@ -1,0 +1,20 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0012_Introdução",
+				"npc_name": "Petbot12",
+				"text": "Recebi um chamado dentro da biblioteca Zila Mamede! Você precisa ir lá! Procure por Charles, ele está perto da entrada.",
+				"buttons": [
+					{
+						"name": "Irei agora!",
+						"commands": [
+						"/tag @initiator add Q0012",
+						"/dialogue change @e[tag=charlesinicial] q0012_Charles @initiator"]
+					}
+				]
+			}
+    ]
+    }
+}

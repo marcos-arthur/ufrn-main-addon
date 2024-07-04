@@ -1,0 +1,109 @@
+{
+  "format_version": "1.18.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ufrn:waypoint",
+      "is_experimental": false,
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "component_groups": {
+      "ufrn:book": {
+        "minecraft:variant": {
+          "value": 0
+        },
+        "minecraft:is_tamed": {}
+      },
+      "ufrn:brush": {
+        "minecraft:variant": {
+          "value": 1
+        }
+      },
+      "ufrn:crafting": {
+        "minecraft:variant": {
+          "value": 2
+        }
+      },
+      "ufrn:hanging_sign": {
+        "minecraft:variant": {
+          "value": 3
+        }
+      },
+      "ufrn:lever": {
+        "minecraft:variant": {
+          "value": 4
+        }
+      },
+      "ufrn:sleep": {
+        "minecraft:variant": {
+          "value": 5
+        }
+      },
+      "ufrn:torchflower": {
+        "minecraft:variant": {
+          "value": 6
+        }
+      },
+      "ufrn:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:persistent": {}
+    },
+    "events": {
+      "ufrn:book": {
+        "add": {
+          "component_groups": ["ufrn:book"]
+        }
+      },
+      "ufrn:brush": {
+        "add": {
+          "component_groups": ["ufrn:brush"]
+        }
+      },
+      "ufrn:crafting": {
+        "add": {
+          "component_groups": ["ufrn:crafting"]
+        }
+      },
+      "ufrn:hanging_sign": {
+        "add": {
+          "component_groups": ["ufrn:hanging_sign"]
+        }
+      },
+      "ufrn:lever": {
+        "add": {
+          "component_groups": ["ufrn:lever"]
+        }
+      },
+      "ufrn:sleep": {
+        "add": {
+          "component_groups": ["ufrn:sleep"]
+        }
+      },
+      "ufrn:torchflower": {
+        "add": {
+          "component_groups": ["ufrn:torchflower"]
+        }
+      },
+      "ufrn:despawn": {
+        "add": {
+          "component_groups": ["ufrn:despawn"]
+        }
+      }
+    }
+  }
+}

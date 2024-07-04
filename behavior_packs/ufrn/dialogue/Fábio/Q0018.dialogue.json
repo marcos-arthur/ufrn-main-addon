@@ -1,0 +1,50 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0018_Fábio",
+				"npc_name": "Fábio",
+				"text": "Olá! Um dos nossos companheiros está lá dentro do labirinto e não posso entrar, já que não sei lutar. Você poderia entrar e resgatá-lo ?",
+				"buttons": [
+					{
+						"name": "Ok!",
+						"commands": ["/tag @initiator add Q0018_1",
+						"/dialogue open @s @initiator q0018_Fábio2",
+						"/dialogue change @e[tag=labirintonpc] q0018_Antônio @initiator"]
+						
+						
+					}
+				]
+			},
+			{
+				"scene_tag": "q0018_Fábio2",
+						"npc_name": "Fábio2",
+						"text": "Além disso, o ajude a trazer o objeto que ele havia dito que estava dentro do labirinto e poderia facilitar a luta contra os lugabots. Também tenho um livro com anotações de como chegar no final do labirinto, está no báu ao lado.",
+						"buttons": [
+							{
+								"name": "Certo!",
+								"commands": [
+								]
+								
+								
+							}
+						]
+					},
+			{
+				"scene_tag": "q0018_Fábio3",
+				"npc_name": "Fábio",
+				"text": "Obrigado por trazer ele de volta! Estávamos muito preocupados com você! Apesar das suas feridas, você vai conseguir se recuperar. ",
+				"buttons": [
+					{
+						"name": "De nada!",
+						"commands": ["/tag @initiator remove Q0018_2",
+						"/tag @initiator remove Q0018",
+						"/tag @initiator remove Q0018_3",
+						"/give @initiator gold_ingot"]
+					}
+				]
+			}
+    ]
+  } 
+}

@@ -1,0 +1,63 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0014_Marcos",
+				"npc_name": "Marcos",
+				"text": "Olá!Conseguimos a informação de que para obter o baú é necessário resolver um puzzle, o resistente que conseguiu o báu deixou uma anotação para trás dizendo o seguinte: o acesso está na intersecção das retas concorrentes dos pilares da base da caixa d'água próximo a reitoria. \n",
+				"buttons": [
+					{
+						"name": "Ok!",
+						"commands": ["/tag @initiator add Q0014_1",
+						"/dialogue open @s @initiator q0014_Marcos1"
+						]
+						
+						
+					}
+				]
+			},
+			{
+				"scene_tag": "q0014_Marcos1",
+				"npc_name": "Marcos",
+				"text": "Eu sei a definição, são retas que possuem um ponto em comum, porém não consegui decifrar a anotação. Espero que eu tenha te ajudado em algo.",
+				"buttons": [
+					{
+						"name": "Entendi!",
+						"commands": ["/tag @initiator remove Q0014_1",
+						"/tag @initiator add Q0014_2",
+						"/dialogue open @s @initiator q0014_Marcos2"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0014_Marcos2",
+				"npc_name": "Marcos",
+				"text": "Se achar o báu, pode ficar com o que está dentro. Também fiz algumas anotações que estão neste mural ao lado, espero que ajude.",
+				"buttons": [
+					{
+						"name": "Certo!",
+						"commands": ["/tag @initiator remove Q0014_2",
+						"/tag @initiator add Q0014_3",
+						"/dialogue open @s @initiator q0014_Marcos3"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0014_Marcos3",
+				"npc_name": "Marcos",
+				"text": "Outra coisa, soube que precisa de ajuda na Biblioteca! Você deveria ir lá. As coordenadas sâo 503, -18, 259",
+				"buttons": [
+					{
+						"name": "Certo!",
+						"commands": ["/tag @initiator remove Q0014_3",
+						"/tag @initiator remove Q0014"
+						]
+					}
+				]
+			}
+    ]
+  } 
+}

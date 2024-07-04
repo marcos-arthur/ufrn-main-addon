@@ -1,0 +1,48 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:npc_dialogue": {
+    "scenes": [
+      {
+        "scene_tag": "q0012_Luiza",
+				"npc_name": "Luiza",
+				"text": "Oi! Então, precisamos de 20m² de roupa para serem usados lá na resistência, você poderia pegar para mim?",
+				"buttons": [
+					{
+						"name": "Sim!",
+						"commands": ["/tag @initiator add Q0013_1",
+						"/dialogue open @s @initiator q0012_Luiza1"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0012_Luiza1",
+				"npc_name": "Luiza",
+				"text": "Existe um báu logo a direita que está atrás da loja de vendas de roupas. Cada bloco de lã corresponde a 1m². Lembre-se! Preciso do valor exato de roupas.  Aqui do lado tem um mural que pode te ajudar a saber a quantidade exata.",
+				"buttons": [
+					{
+						"name": "Entendi!",
+						"commands": ["/tag @initiator remove Q0012_1",
+						"/tag @initiator add Q0012_2",
+						"/dialogue open @s @initiator q0012_Luiza2"
+						]
+					}
+				]
+			},
+			{
+				"scene_tag": "q0012_Luiza2",
+				"npc_name": "Luiza",
+				"text": "Quando conseguir! Leve o valor exato ao soldado que está ao lado do Petbot12, ele levará os tecidos a base.",
+				"buttons": [
+					{
+						"name": "Ok!",
+						"commands": ["/tag @initiator remove Q0012_2",
+						"/tag @initiator remove Q0012"
+						]
+					}
+				]
+			}
+
+    ]
+  } 
+}

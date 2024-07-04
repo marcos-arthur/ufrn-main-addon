@@ -1,0 +1,56 @@
+{
+  "format_version": "1.18.10",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ufrn:tick",
+      "is_experimental": false,
+      "is_spawnable": false,
+      "is_summonable": true,
+      "animations": {
+        "commands": "controller.animation.ufrn.tick.commands"
+      },
+      "scripts": {
+        "animate": ["commands"]
+      }
+    },
+    "component_groups": {
+      "ufrn:run_command": {
+        "minecraft:is_tamed": {}
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0,
+        "height": 0
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": false
+          }
+        ]
+      },
+      "minecraft:persistent": {},
+      "minecraft:timer": {
+        "looping": true,
+        "time": [1, 1],
+        "time_down_event": {
+          "event": "ufrn:on_second"
+        }
+      }
+    },
+    "events": {
+      "ufrn:on_second": {
+        "add": {
+          "component_groups": ["ufrn:run_command"]
+        }
+      },
+      "ufrn:ran_command": {
+        "remove": {
+          "component_groups": ["ufrn:run_command"]
+        }
+      }
+    }
+  }
+}
