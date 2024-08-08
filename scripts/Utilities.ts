@@ -1,8 +1,6 @@
-import { world, BlockPermutation, RawMessage, Player, system, Vector3, Dimension } from "@minecraft/server";
+import { world, Dimension, RawMessage, Player, system, BlockPermutation, Vector3 } from "@minecraft/server";
 
 export default class Utilities {
-  static _overworld: Dimension = world.getDimension("overworld");
-
   static fillBlock(
     blockPerm: BlockPermutation,
     xFrom: number,
@@ -90,7 +88,8 @@ export default class Utilities {
   ): Player[] {
     let playersInVolume: Player[] = [];
 
-    this._overworld
+    world
+      .getDimension("overworld")
       .getEntities({
         location: _location,
         maxDistance: _maxDistance,
@@ -104,10 +103,9 @@ export default class Utilities {
         }
       });
 
+    // ItemStack;
+    // MinecraftItemTypes.WritableBook;
+
     return playersInVolume;
   }
-  /*
-
-  
-  */
 }

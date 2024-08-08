@@ -3,30 +3,28 @@
   "header": {
     "name": "UFRN Addon",
     "description": "Configurações do mundo",
-    "uuid": "5f4ddb2c-614e-4674-ba50-2c482c2a7989",
-    "version": [0, 0, 1],
-    "min_engine_version": [1, 20, 80]
+    "uuid": "9e578eca-45f8-4c6d-bcda-7d589b151cdd",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 2]
   },
   "modules": [
     {
       "description": "Script resources",
       "language": "javascript",
       "type": "script",
-      "uuid": "96100c25-1ed0-4e6f-b18e-1ec0726809a1",
-      "version": [0, 0, 1],
+      "uuid": "de2f440b-ba2d-4b86-9839-e3c2516f9e9f",
+      "version": [1, 0, 0],
       "entry": "scripts/main.js"
-    },
-    {
-      "description": "Dialogue resources",
-      "type": "data",
-      "uuid": "d7cb473b-88d9-4eaf-a6ee-01877343d64b",
-      "version": [0, 0, 1]
     }
   ],
   "dependencies": [
     {
       "module_name": "@minecraft/server",
-      "version": "1.9.0"
+      "version": "1.8.0"
+    },
+    {
+      "uuid": "18118958-b9bc-4642-a8e0-03a93e534b12",
+      "version": [1, 0, 0]
     }
   ]
 }
